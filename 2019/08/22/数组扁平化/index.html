@@ -103,7 +103,7 @@
     
         
             
-            <li><div data-rel="面试">面试<small>(1)</small></div>
+            <li><div data-rel="算法">算法<small>(2)</small></div>
                 
             </li>
             
@@ -111,7 +111,7 @@
     
         
             
-            <li><div data-rel="算法">算法<small>(2)</small></div>
+            <li><div data-rel="面试">面试<small>(1)</small></div>
                 
             </li>
             
@@ -162,15 +162,15 @@
     <div class="tags-list">
     
     <li class="article-tag-list-item">
-        <a href="javascript:" class="color3">前端</a>
-    </li>
-    
-    <li class="article-tag-list-item">
         <a href="javascript:" class="color1">数组扁平化</a>
     </li>
     
     <li class="article-tag-list-item">
         <a href="javascript:" class="color3">js</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">前端</a>
     </li>
     
     <li class="article-tag-list-item">
@@ -187,20 +187,20 @@
     
     <nav id="title-list-nav">
         
-        <a  class="面试 "
-           href="/2019/08/22/美团一面/"
-           data-tag="前端"
-           data-author="" >
-            <span class="post-title" title="美团一面">美团一面</span>
-            <span class="post-date" title="2019-08-22 13:26:16">2019/08/22</span>
-        </a>
-        
         <a  class="算法 "
            href="/2019/08/22/数组扁平化/"
            data-tag="数组扁平化,js"
            data-author="" >
             <span class="post-title" title="数组扁平化">数组扁平化</span>
             <span class="post-date" title="2019-08-22 15:46:24">2019/08/22</span>
+        </a>
+        
+        <a  class="面试 "
+           href="/2019/08/22/美团一面/"
+           data-tag="前端"
+           data-author="" >
+            <span class="post-title" title="美团一面">美团一面</span>
+            <span class="post-date" title="2019-08-22 13:26:16">2019/08/22</span>
         </a>
         
         <a  class="算法 "
@@ -249,7 +249,7 @@
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title='更新时间: 2019-08-22 08:14:29'>2019-08-22 15:46</time>
+        创建时间:<time class="date" title='更新时间: 2019-08-22 08:26:38'>2019-08-22 15:46</time>
         
     </div>
     <div class="article-meta">
@@ -278,7 +278,7 @@
         <p><strong>多维数组=&gt;一维数组，例如[1,2,[1,2],[1,2,[1,2]]] =&gt;[1,2,1,2,1,2,1,2]</strong></p>
 <h3 id="方案一"><a href="#方案一" class="headerlink" title="方案一"></a>方案一</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">let res = arr.flat(Infinity);</span><br></pre></td></tr></table></figure>
 
-<h3 id="方案二"><a href="#方案二" class="headerlink" title="方案二"></a>方案二</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">let str = JSON,stringify(arr);</span><br><span class="line">let res = str.replace(/(\\[\\]))/g, &apos;&apos;).split(&apos;,&apos;);</span><br></pre></td></tr></table></figure>
+<h3 id="方案二"><a href="#方案二" class="headerlink" title="方案二"></a>方案二</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">let str = JSON.stringify(arr);</span><br><span class="line">let res = str.replace(/(\\[\\]))/g, &apos;&apos;).split(&apos;,&apos;);</span><br></pre></td></tr></table></figure>
 
 <h3 id="方案三"><a href="#方案三" class="headerlink" title="方案三"></a>方案三</h3><p><strong>利用join方法</strong></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">let res  = arr.join().split(&apos;,&apos;);</span><br></pre></td></tr></table></figure>
@@ -287,7 +287,7 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">let res  = arr.toString().split(&apos;,&apos;);</span><br></pre></td></tr></table></figure>
 
 <h3 id="方案五"><a href="#方案五" class="headerlink" title="方案五"></a>方案五</h3><p><strong>利用递归处理</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">let result = [];</span><br><span class="line">let fn = function(ary) &#123;</span><br><span class="line">    for(let i = 0; i &lt; ary.length; i++) &#125;&#123;</span><br><span class="line">        let item = ary[i];</span><br><span class="line">        if (Array.isArray(ary[i]))&#123;</span><br><span class="line">            fn(item);</span><br><span class="line">        &#125; </span><br><span class="line">        else &#123;</span><br><span class="line">            result.push(item);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">let result = [];</span><br><span class="line">let fn = function(ary) &#123;</span><br><span class="line">    for(let i = 0; i &lt; ary.length; i++) &#123;</span><br><span class="line">        let item = ary[i];</span><br><span class="line">        if (Array.isArray(ary[i]))&#123;</span><br><span class="line">            fn(item);</span><br><span class="line">        &#125; </span><br><span class="line">        else &#123;</span><br><span class="line">            result.push(item);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <h3 id="方案六"><a href="#方案六" class="headerlink" title="方案六"></a>方案六</h3><p><strong>利用扩展运算符</strong></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">while (ary.some(Array.isArray)) &#123;</span><br><span class="line">    ary = [].concat(...ary);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -337,7 +337,7 @@
     /*作者、标签的自动补全*/
     $(function () {
         $('.search').AutoComplete({
-            'data': ['#前端','#数组扁平化','#js','#排序算法',],
+            'data': ['#数组扁平化','#js','#前端','#排序算法',],
             'itemHeight': 20,
             'width': 418
         }).AutoComplete('show');
