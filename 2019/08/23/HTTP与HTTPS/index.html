@@ -2,9 +2,9 @@
 <html>
 <head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="utf-8">
-  <title>数组扁平化 | forgiveForever</title>
-  <meta name="keywords" content=" 数组扁平化 , js ">
-  <meta name="description" content="数组扁平化 | forgiveForever">
+  <title>HTTP与HTTPS | forgiveForever</title>
+  <meta name="keywords" content=" HTTP , HTTPS , HTTP与HTTPS区别 ">
+  <meta name="description" content="HTTP与HTTPS | forgiveForever">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="forgiveForeverforgiveForever LQ的个人博客。 目的 为了梳理知识，便于复习、巩固学过的知识、拓宽知识面">
 <meta property="og:type" content="website">
@@ -275,9 +275,9 @@
 </aside>
 <div class="post">
     <div class="pjax">
-        <article id="算法-数组扁平化" class="article article-type-算法" itemscope itemprop="blogPost">
+        <article id="计算机网络-HTTP与HTTPS" class="article article-type-计算机网络" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">数组扁平化</h1>
+        <h1 class="article-title">HTTP与HTTPS</h1>
     
     <div class="article-meta">
         
@@ -285,23 +285,25 @@
         
         <span class="book">
             
-                <a href="javascript:" data-rel="算法">算法</a>
+                <a href="javascript:" data-rel="计算机网络">计算机网络</a>
             
         </span>
         
         
         <span class="tag">
             
-            <a href="javascript:" class="color1">数组扁平化</a>
+            <a href="javascript:" class="color5">HTTP</a>
             
-            <a href="javascript:" class="color3">js</a>
+            <a href="javascript:" class="color1">HTTPS</a>
+            
+            <a href="javascript:" class="color3">HTTP与HTTPS区别</a>
             
         </span>
         
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title='更新时间: 2019-08-22 08:27:40'>2019-08-22 15:46</time>
+        创建时间:<time class="date" title='更新时间: 2019-08-23 06:08:17'>2019-08-23 10:37</time>
         
     </div>
     <div class="article-meta">
@@ -312,7 +314,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#方案一"><span class="toc-text">方案一</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#方案二"><span class="toc-text">方案二</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#方案三"><span class="toc-text">方案三</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#方法四"><span class="toc-text">方法四</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#方案五"><span class="toc-text">方案五</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#方案六"><span class="toc-text">方案六</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#HTTP"><span class="toc-text">HTTP</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#HTTP概念"><span class="toc-text">HTTP概念</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#HTTP请求方法"><span class="toc-text">HTTP请求方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#HTTP常见状态码"><span class="toc-text">HTTP常见状态码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#HTTP报文字段"><span class="toc-text">HTTP报文字段</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#HTTP缺点"><span class="toc-text">HTTP缺点</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#HTTPS"><span class="toc-text">HTTPS</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#HTTPS概念"><span class="toc-text">HTTPS概念</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#HTTPS工作原理"><span class="toc-text">HTTPS工作原理</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#区别"><span class="toc-text">区别</span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -327,23 +329,50 @@
 </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <p><strong>多维数组=&gt;一维数组，例如[1,2,[1,2],[1,2,[1,2]]] =&gt;[1,2,1,2,1,2,1,2]</strong></p>
-<h3 id="方案一"><a href="#方案一" class="headerlink" title="方案一"></a>方案一</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">let res = arr.flat(Infinity);</span><br></pre></td></tr></table></figure>
-
-<h3 id="方案二"><a href="#方案二" class="headerlink" title="方案二"></a>方案二</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">let str = JSON.stringify(arr);</span><br><span class="line">let res = str.replace(/(\\[\\]))/g, &apos;&apos;).split(&apos;,&apos;);</span><br></pre></td></tr></table></figure>
-
-<h3 id="方案三"><a href="#方案三" class="headerlink" title="方案三"></a>方案三</h3><p><strong>利用join方法</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">let res  = arr.join().split(&apos;,&apos;);</span><br></pre></td></tr></table></figure>
-
-<h3 id="方法四"><a href="#方法四" class="headerlink" title="方法四"></a>方法四</h3><p><strong>利用toString方法</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">let res  = arr.toString().split(&apos;,&apos;);</span><br></pre></td></tr></table></figure>
-
-<h3 id="方案五"><a href="#方案五" class="headerlink" title="方案五"></a>方案五</h3><p><strong>利用递归处理</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">let result = [];</span><br><span class="line">let fn = function(ary) &#123;</span><br><span class="line">    for(let i = 0; i &lt; ary.length; i++) &#123;</span><br><span class="line">        let item = ary[i];</span><br><span class="line">        if (Array.isArray(ary[i]))&#123;</span><br><span class="line">            fn(item);</span><br><span class="line">        &#125; </span><br><span class="line">        else &#123;</span><br><span class="line">            result.push(item);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="方案六"><a href="#方案六" class="headerlink" title="方案六"></a>方案六</h3><p><strong>利用扩展运算符</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">while (ary.some(Array.isArray)) &#123;</span><br><span class="line">    ary = [].concat(...ary);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
+        <h2 id="HTTP"><a href="#HTTP" class="headerlink" title="HTTP"></a>HTTP</h2><h3 id="HTTP概念"><a href="#HTTP概念" class="headerlink" title="HTTP概念"></a>HTTP概念</h3><p><strong>超文本传输​​协议</strong>（HTTP）是用于传输诸如HTML的超媒体文档的应用层协议。它被设计用于Web浏览器和Web服务器之间的通信，但它也可以用于其他目的。 HTTP遵循经典的客户端-服务端模型，客户端打开一个连接以发出请求，然后等待它收到服务器端响应。 HTTP是无状态协议，意味着服务器不会在两个请求之间保留任何数据（状态）。虽然通常基于TCP / IP层，但可以在任何可靠的传输层上使用;也就是说，一个不会静默丢失消息的协议，如UDP。</p>
+<h3 id="HTTP请求方法"><a href="#HTTP请求方法" class="headerlink" title="HTTP请求方法"></a>HTTP请求方法</h3><ul>
+<li><strong>GET: 获取URL指定的资源</strong></li>
+<li><strong>POST：传输实体信息</strong></li>
+<li><strong>PUT：上传文件</strong></li>
+<li><strong>DELETE：删除文件</strong></li>
+<li><strong>HEAD：获取报文首部，与GET相比，不返回报文主体部分</strong></li>
+<li><strong>OPTIONS：询问支持的方法</strong></li>
+<li><strong>TRACE：追踪请求的路径</strong></li>
+<li><strong>CONNECT：要求在与代理服务器通信时建立隧道，使用隧道进行TCP通信。主要使用SSL和TLS将数据加密后通过网络隧道进行传输</strong></li>
+</ul>
+<h3 id="HTTP常见状态码"><a href="#HTTP常见状态码" class="headerlink" title="HTTP常见状态码"></a>HTTP常见状态码</h3><p><img src="./http%E5%B8%B8%E7%94%A8%E7%8A%B6%E6%80%81%E7%A0%81.png" alt></p>
+<h3 id="HTTP报文字段"><a href="#HTTP报文字段" class="headerlink" title="HTTP报文字段"></a>HTTP报文字段</h3><ul>
+<li><strong>请求报文字段</strong></li>
+<li><strong>应答报文字段</strong></li>
+<li><strong>实体首部字段</strong></li>
+<li><strong>通用报文字段</strong></li>
+<li><strong>其他报文字段</strong></li>
+</ul>
+<h3 id="HTTP缺点"><a href="#HTTP缺点" class="headerlink" title="HTTP缺点"></a>HTTP缺点</h3><ul>
+<li><strong>通信使用明文，可能被窃听</strong></li>
+<li><strong>不验证通信方的身份，可能遭遇伪装</strong></li>
+<li><strong>无法证明报文的完整性，有可能遭遇篡改</strong></li>
+</ul>
+<h2 id="HTTPS"><a href="#HTTPS" class="headerlink" title="HTTPS"></a>HTTPS</h2><h3 id="HTTPS概念"><a href="#HTTPS概念" class="headerlink" title="HTTPS概念"></a>HTTPS概念</h3><p><strong>HTTPS</strong>（全称：Hyper Text Transfer Protocol over Secure Socket Layer），是以安全为目标的HTTP通道，简单讲是HTTP的安全版。即HTTP下加入SSL层，HTTPS的安全基础是SSL，因此加密的详细内容就需要SSL。 现在它被广泛用于万维网上安全敏感的通讯，例如交易支付方面。</p>
+<h3 id="HTTPS工作原理"><a href="#HTTPS工作原理" class="headerlink" title="HTTPS工作原理"></a>HTTPS工作原理</h3><p><em>我们都知道HTTPS能够加密信息，以免敏感信息被第三方获取，所以很多银行网站或电子邮箱等等安全级别较高的服务都会采用HTTPS协议。</em></p>
+<p><img src="./https%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86.png" alt></p>
+<ul>
+<li><strong>1.客户端发起HTTPS请求</strong><br>&emsp;&emsp;用户在浏览器里输入一个https网址，然后连接到server的443端口。</li>
+<li><strong>2.服务端的配置</strong><br>&emsp;&emsp;采用HTTPS协议的服务器必须要有一套数字证书，可以自己制作，也可以向组织申请，区别就是自己颁发的证书需要客户端验证通过，才可以继续访问，而使用受信任的公司申请的证书则不会弹出提示页面(startssl就是个不错的选择，有1年的免费服务)。<br>&emsp;&emsp;这套证书其实就是一对公钥和私钥，如果对公钥和私钥不太理解，可以想象成一把钥匙和一个锁头，只是全世界只有你一个人有这把钥匙，你可以把锁头给别人，别人可以用这个锁把重要的东西锁起来，然后发给你，因为只有你一个人有这把钥匙，所以只有你才能看到被这把锁锁起来的东西。</li>
+<li><strong>3.传送证书</strong><br>&emsp;&emsp;这个证书其实就是公钥，只是包含了很多信息，如证书的颁发机构，过期时间等等。</li>
+<li><strong>4.客户端解析证书</strong><br>&emsp;&emsp;这部分工作是有客户端的TLS来完成的，首先会验证公钥是否有效，比如颁发机构，过期时间等等，如果发现异常，则会弹出一个警告框，提示证书存在问题。<br>&emsp;&emsp;如果证书没有问题，那么就生成一个随机值，然后用证书对该随机值进行加密，就好像上面说的，把随机值用锁头锁起来，这样除非有钥匙，不然看不到被锁住的内容。</li>
+<li><strong>5.传送加密信息</strong><br>&emsp;&emsp;这部分传送的是用证书加密后的随机值，目的就是让服务端得到这个随机值，以后客户端和服务端的通信就可以通过这个随机值来进行加密解密了。</li>
+<li><strong>6.服务段解密信息</strong><br>&emsp;&emsp;服务端用私钥解密后，得到了客户端传过来的随机值(私钥)，然后把内容通过该值进行对称加密，所谓对称加密就是，将信息和私钥通过某种算法混合在一起，这样除非知道私钥，不然无法获取内容，而正好客户端和服务端都知道这个私钥，所以只要加密算法够彪悍，私钥够复杂，数据就够安全。</li>
+<li><strong>7.传输加密后的信息</strong><br>&emsp;&emsp;这部分信息是服务段用私钥加密后的信息，可以在客户端被还原。</li>
+<li><strong>8.客户端解密信息</strong><br>&emsp;&emsp;客户端用之前生成的私钥解密服务段传过来的信息，于是获取了解密后的内容，整个过程第三方即使监听到了数据，也束手无策。</li>
+</ul>
+<h2 id="区别"><a href="#区别" class="headerlink" title="区别"></a>区别</h2><ul>
+<li><strong>HTTPS 协议需要到 CA 申请证书，一般免费证书很少，需要交费。</strong></li>
+<li><strong>HTTP 协议运行在 TCP 之上，所有传输的内容都是明文，HTTPS 运行在 SSL/TLS 之上，SSL/TLS 运行在 TCP 之上，所有传输的内容都经过加密的。</strong></li>
+<li><strong>HTTP 和 HTTPS 使用的是完全不同的连接方式，用的端口也不一样，前者是 80，后者是 443。</strong></li>
+<li><strong>HTTPS 可以有效的防止运营商劫持，解决了防劫持的一个大问题。</strong></li>
+</ul>
+<p><img src="./http%E4%B8%8Ehttps%E5%8C%BA%E5%88%AB.png" alt></p>
 
       
        <hr><span style="font-style: italic;color: gray;"> 欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以邮件至 1396961884@qq.com </span>
