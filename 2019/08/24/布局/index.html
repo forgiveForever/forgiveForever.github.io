@@ -2,9 +2,9 @@
 <html>
 <head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="utf-8">
-  <title>forgiveForever</title>
-  <meta name="keywords" content>
-  <meta name="description" content="forgiveForever">
+  <title>布局 | forgiveForever</title>
+  <meta name="keywords" content=" 布局 ">
+  <meta name="description" content="布局 | forgiveForever">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="forgiveForeverforgiveForever LQ的个人博客。 目的 为了梳理知识，便于复习、巩固学过的知识、拓宽知识面">
 <meta property="og:type" content="website">
@@ -52,7 +52,7 @@
 </div>
 
 <body>
-<aside class="nav mobile">
+<aside class="nav">
     <div class="nav-left">
         <a href="/" class="avatar_target">
     <img class="avatar" src="/img/head.jpg" />
@@ -321,12 +321,38 @@
         </div>
     </div>
 </aside>
-<div class="post index">
+<div class="post">
     <div class="pjax">
-        <article class="index">
-            <div class="toc-ref">
+        <article id="css-布局" class="article article-type-css" itemscope itemprop="blogPost">
     
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Why-Blog"><span class="toc-text">Why Blog</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#对博客的理解"><span class="toc-text">对博客的理解</span></a></li></ol></li></ol>
+        <h1 class="article-title">布局</h1>
+    
+    <div class="article-meta">
+        
+        
+        
+        
+        <span class="tag">
+            
+            <a href="javascript:" class="color3">布局</a>
+            
+        </span>
+        
+    </div>
+    <div class="article-meta">
+        
+        创建时间:<time class="date" title='更新时间: 2019-08-24 02:29:21'>2019-08-24 09:29</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        
+        
+    </div>
+    
+    <div class="toc-ref">
+    
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#CSS常见布局方式"><span class="toc-text">CSS常见布局方式</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-传统盒模型布局方式"><span class="toc-text">1.传统盒模型布局方式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-文档流布局"><span class="toc-text">2.文档流布局</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-浮动布局"><span class="toc-text">3.浮动布局</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-定位布局"><span class="toc-text">4.定位布局</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-表格布局"><span class="toc-text">5.表格布局</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#6-网格布局-grid"><span class="toc-text">6.网格布局(grid)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#7-flex布局"><span class="toc-text">7.flex布局</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#表格布局"><span class="toc-text">表格布局</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#flex布局"><span class="toc-text">flex布局</span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -339,22 +365,60 @@
     }
 </style>
 </div>
-            <h1 id="Why-Blog"><a href="#Why-Blog" class="headerlink" title="Why Blog"></a>Why Blog</h1><h2 id="对博客的理解"><a href="#对博客的理解" class="headerlink" title="对博客的理解"></a>对博客的理解</h2><p>喜欢写Blog的人，会经历三个阶段。</p>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="CSS常见布局方式"><a href="#CSS常见布局方式" class="headerlink" title="CSS常见布局方式"></a>CSS常见布局方式</h3><p><img src="./%E5%B8%B8%E8%A7%81%E5%B8%83%E5%B1%80%E6%96%B9%E5%BC%8F.png" alt></p>
+<h4 id="1-传统盒模型布局方式"><a href="#1-传统盒模型布局方式" class="headerlink" title="1.传统盒模型布局方式"></a>1.传统盒模型布局方式</h4><p><strong>&emsp;&emsp;我们的传统布局方式就是通过盒模型，使用 display 属性（文档流布局） + position 属性（定位布局） + float属性（浮动布局）。</strong></p>
+<h4 id="2-文档流布局"><a href="#2-文档流布局" class="headerlink" title="2.文档流布局"></a>2.文档流布局</h4><p><strong>&emsp;&emsp;这是最基本的布局方式，就是按照文档的顺序一个一个显示出来，块元素独占一行，行内元素共享一行。</strong></p>
+<h4 id="3-浮动布局"><a href="#3-浮动布局" class="headerlink" title="3.浮动布局"></a>3.浮动布局</h4><p><strong>&emsp;&emsp;浮动方式布局就是使用 float 属性，使元素脱离文档流，浮动起来。</strong></p>
+<h4 id="4-定位布局"><a href="#4-定位布局" class="headerlink" title="4.定位布局"></a>4.定位布局</h4><p><strong>&emsp;&emsp;通过 position 属性来进行定位。</strong></p>
+<h4 id="5-表格布局"><a href="#5-表格布局" class="headerlink" title="5.表格布局"></a>5.表格布局</h4><p><strong>根据<table>标签或者display属性来定义表格中的元素 display:table/table-cell /table-row</table></strong></p>
+<h4 id="6-网格布局-grid"><a href="#6-网格布局-grid" class="headerlink" title="6.网格布局(grid)"></a>6.网格布局(grid)</h4><h4 id="7-flex布局"><a href="#7-flex布局" class="headerlink" title="7.flex布局"></a>7.flex布局</h4><p><em>可以简便、完整、响应式地实现各种页面布局。</em><br><strong>&emsp;&emsp;flex 是一种新型的布局方式，使用该布局方式可以实现几乎所有你想要的效果。但是要注意其浏览器的兼容性，flex 只支持 ie 10+，所有还是要根据你的项目情况使用（要求至少 ie 9）</strong><br><img src="./flex%E6%B5%8F%E8%A7%88%E5%99%A8%E6%94%AF%E6%8C%81%E6%83%85%E5%86%B5.png" alt></p>
+<h3 id="表格布局"><a href="#表格布局" class="headerlink" title="表格布局"></a>表格布局</h3><p><strong>table的display可选值：</strong></p>
+<ul>
+<li><strong>table：指定对象作为块元素级的表格，相当于html标签 table</strong></li>
+<li><strong>inline-table：指定对象作为内联元素级的表格，相当于html标签table</strong></li>
+<li><strong>table-caption：指定对象作为表格标题，相当于html标签caption</strong></li>
+<li><strong>table-cell：指定对象作为表格单元格，相当于html标签td</strong></li>
+<li><strong>table-row：指定对象作为表格行，相当于html标签tr</strong></li>
+<li><strong>table-row-group：指定对象作为表格行组，相当于html标签tbody</strong></li>
+<li><strong>table-column：指定对象作为表格列，相当于html标签col</strong></li>
+<li><strong>table-column-group：指定对象作为表格列组显示，相当于html标签colgroup</strong></li>
+<li><strong>table-header-group：指定对象作为表格标题组，相当于html标签thead</strong></li>
+<li><strong>table-footer-group：指定对象作为表格脚注组，相当于html标签tfoot</strong></li>
+</ul>
+<p><em>还有一些协助属性：</em></p>
+<ul>
+<li><strong>border-collpase：用来决定表格的边框是分开的还是合并的。在分隔模式下，相邻的单元格都拥有独立的边框。在合并模式下，相邻单元格共享边框。</strong></li>
+<li><strong>border-spacing： 规定相邻单元格边框之间的距离（只适用于 边框分离模式 ）。相当于 HTML 中的 cellspacing 属性，但是第二个可选的值可以用来设—置不同于水平间距的垂直间距。</strong></li>
+<li><strong>table-layout：定义了用于布局表格单元格，行和列的算法。（auto：表格及单元格的宽度取决于其包含的内容。fixed：表格和列的宽度通过表格的宽度来   设置，某一列的宽度仅由该列首行的单元格决定。</strong></li>
+<li><strong>vertical-align：用来指定行内元素（inline）或表格单元格（table-cell）元素的垂直对齐方式。</strong></li>
+</ul>
+<h3 id="flex布局"><a href="#flex布局" class="headerlink" title="flex布局"></a>flex布局</h3><p>flex 的使用方法很简单，只需要将其 display 属性设置为 flex 就可以，也可以设置行内的 flex，记得 Webkit 内核的浏览器，必须加上 -webkit 前缀。注意，设为 Flex 布局以后，子元素的 float、clear 和 vertical-align 属性将失效。</p>
 <blockquote>
-<p>第一阶段，刚接触Blog，觉得很新鲜，试着选择一个免费空间来写。</p>
+<p>.ele{<br>      display: -webkit-flex;<br>      display: flex;<br>      display: inline-flex;<br>      display: -webkit-inline-flex;<br>  }</p>
 </blockquote>
 <blockquote>
-<p>第二阶段，发现免费空间限制太多，就自己购买域名和空间，搭建独立博客。</p>
+<p>在 flex 中，最核心的概念就是容器和轴，所有的属性都是围绕容器和轴设置的。其中，容器分为父容器和子容器。轴分为主轴和交叉轴（主轴默认为水平方向，方向向右，交叉轴为主轴顺时针旋转 90°）。</p>
 </blockquote>
-<blockquote>
-<p>第三阶段，觉得独立博客的管理太麻烦，最好在保留控制权的前提下，让别人来管，自己只负责写文章。</p>
-</blockquote>
-<p>我们每个人的在网络上产生的数据越来越多，这些信息是我们在互联网上存在过的痕迹，值得我们认真对待。但是它们被分散分布在各个网站上。很多时候我们很难将它们聚合在一起，而且各个网站的信息排布方式也没有办法自由控制，所以我们需要一个可以由自己主宰的空间——博客。</p>
-<p>通过博客，我们可以记录自己的生活和成长的轨迹。它不像 Twitter 那样碎片化，也不像 Facebook 那样关系化，它是私人的空间。</p>
+<p>在使用 flex 的元素中，默认存在两根轴：水平的主轴（main axis）和垂直的交叉轴（cross axis）主轴开始的位置称为 main start，主轴结束的位置称为 main end。同理，交叉轴开始的位置称为 cross start，交叉轴结束的位置称为 cross end。在使用 flex 的子元素中，占据的主轴空间叫做 main size，占据的交叉轴空间叫做 cross size。<br><img src="./flex%E5%B8%83%E5%B1%80.png" alt></p>
 
-        </article>
-        
-        
+      
+       <hr><span style="font-style: italic;color: gray;"> 欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以邮件至 1396961884@qq.com </span>
+    </div>
+</article>
+
+
+
+
+
+
+
+    
+
+
+
+
     </div>
     <div class="copyright">
         <p class="footer-entry">©2016-2020 forgiveForever</p>
