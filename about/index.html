@@ -190,6 +190,14 @@
     </li>
     
     <li class="article-tag-list-item">
+        <a href="javascript:" class="color2">Cookie</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">Session</a>
+    </li>
+    
+    <li class="article-tag-list-item">
         <a href="javascript:" class="color5">HTTP</a>
     </li>
     
@@ -199,14 +207,6 @@
     
     <li class="article-tag-list-item">
         <a href="javascript:" class="color3">HTTP与HTTPS区别</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a href="javascript:" class="color2">Cookie</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a href="javascript:" class="color3">Session</a>
     </li>
     
     <li class="article-tag-list-item">
@@ -222,11 +222,15 @@
     </li>
     
     <li class="article-tag-list-item">
-        <a href="javascript:" class="color1">数组扁平化</a>
+        <a href="javascript:" class="color3">js</a>
     </li>
     
     <li class="article-tag-list-item">
-        <a href="javascript:" class="color3">js</a>
+        <a href="javascript:" class="color5">斐波那契</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color1">数组扁平化</a>
     </li>
     
     <li class="article-tag-list-item">
@@ -235,10 +239,6 @@
     
     <li class="article-tag-list-item">
         <a href="javascript:" class="color5">网络协议</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a href="javascript:" class="color5">斐波那契</a>
     </li>
     
     <li class="article-tag-list-item">
@@ -268,19 +268,19 @@
         </a>
         
         <a  class="计算机网络 "
-           href="/2019/08/23/HTTP与HTTPS/"
-           data-tag="HTTP,HTTPS,HTTP与HTTPS区别"
-           data-author="" >
-            <span class="post-title" title="HTTP与HTTPS">HTTP与HTTPS</span>
-            <span class="post-date" title="2019-08-23 10:37:29">2019/08/23</span>
-        </a>
-        
-        <a  class="计算机网络 "
            href="/2019/08/24/Cookie与Session/"
            data-tag="Cookie,Session"
            data-author="" >
             <span class="post-title" title="Cookie与Session">Cookie与Session</span>
             <span class="post-date" title="2019-08-23 18:43:17">2019/08/23</span>
+        </a>
+        
+        <a  class="计算机网络 "
+           href="/2019/08/23/HTTP与HTTPS/"
+           data-tag="HTTP,HTTPS,HTTP与HTTPS区别"
+           data-author="" >
+            <span class="post-title" title="HTTP与HTTPS">HTTP与HTTPS</span>
+            <span class="post-date" title="2019-08-23 10:37:29">2019/08/23</span>
         </a>
         
         <a  class="JS "
@@ -300,8 +300,16 @@
         </a>
         
         <a  class="算法 "
+           href="/2019/08/23/斐波那契/"
+           data-tag="js,斐波那契"
+           data-author="" >
+            <span class="post-title" title="斐波那契">斐波那契</span>
+            <span class="post-date" title="2019-08-22 16:58:49">2019/08/22</span>
+        </a>
+        
+        <a  class="算法 "
            href="/2019/08/22/数组扁平化/"
-           data-tag="数组扁平化,js"
+           data-tag="js,数组扁平化"
            data-author="" >
             <span class="post-title" title="数组扁平化">数组扁平化</span>
             <span class="post-date" title="2019-08-22 15:46:24">2019/08/22</span>
@@ -321,14 +329,6 @@
            data-author="" >
             <span class="post-title" title="网络协议">网络协议</span>
             <span class="post-date" title="2019-08-23 14:12:21">2019/08/23</span>
-        </a>
-        
-        <a  class="算法 "
-           href="/2019/08/23/斐波那契/"
-           data-tag="js,斐波那契"
-           data-author="" >
-            <span class="post-title" title="斐波那契">斐波那契</span>
-            <span class="post-date" title="2019-08-22 16:58:49">2019/08/22</span>
         </a>
         
         <a  class="面试 "
@@ -444,7 +444,7 @@
     /*作者、标签的自动补全*/
     $(function () {
         $('.search').AutoComplete({
-            'data': ['#Ajax','#HTTP','#HTTPS','#HTTP与HTTPS区别','#Cookie','#Session','#判断五大主流浏览器','#原生JS','#布局','#数组扁平化','#js','#盒模型','#网络协议','#斐波那契','#前端','#排序算法',],
+            'data': ['#Ajax','#Cookie','#Session','#HTTP','#HTTPS','#HTTP与HTTPS区别','#判断五大主流浏览器','#原生JS','#布局','#js','#斐波那契','#数组扁平化','#盒模型','#网络协议','#前端','#排序算法',],
             'itemHeight': 20,
             'width': 418
         }).AutoComplete('show');
