@@ -2,9 +2,9 @@
 <html>
 <head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="utf-8">
-  <title>美团一面 | forgiveForever</title>
-  <meta name="keywords" content=" 前端 ">
-  <meta name="description" content="美团一面 | forgiveForever">
+  <title>前端页面优化 | forgiveForever</title>
+  <meta name="keywords" content=" 页面优化 , 网页加载过程 ">
+  <meta name="description" content="前端页面优化 | forgiveForever">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="forgiveForeverforgiveForever LQ的个人博客。 目的 为了梳理知识，便于复习、巩固学过的知识、拓宽知识面">
 <meta property="og:type" content="website">
@@ -419,9 +419,9 @@
 </aside>
 <div class="post">
     <div class="pjax">
-        <article id="面试-美团一面" class="article article-type-面试" itemscope itemprop="blogPost">
+        <article id="其他-前端页面优化" class="article article-type-其他" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">美团一面</h1>
+        <h1 class="article-title">前端页面优化</h1>
     
     <div class="article-meta">
         
@@ -429,21 +429,23 @@
         
         <span class="book">
             
-                <a href="javascript:" data-rel="面试">面试</a>
+                <a href="javascript:" data-rel="其他">其他</a>
             
         </span>
         
         
         <span class="tag">
             
-            <a href="javascript:" class="color3">前端</a>
+            <a href="javascript:" class="color5">页面优化</a>
+            
+            <a href="javascript:" class="color2">网页加载过程</a>
             
         </span>
         
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title='更新时间: 2019-08-26 02:46:32'>2019-08-22 13:26</time>
+        创建时间:<time class="date" title='更新时间: 2019-08-26 13:07:56'>2019-08-26 20:40</time>
         
     </div>
     <div class="article-meta">
@@ -454,7 +456,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#美团一面"><span class="toc-text">美团一面</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-自我介绍"><span class="toc-text">1.自我介绍</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-项目中用到的es6那些语法"><span class="toc-text">2.项目中用到的es6那些语法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-HTTP和HTTPS"><span class="toc-text">3.HTTP和HTTPS</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-常见的布局方式"><span class="toc-text">4.常见的布局方式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-元素垂直局中"><span class="toc-text">5.元素垂直局中</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#6-利用velocity解决poi-tl数据缺失不渲染问题"><span class="toc-text">6.利用velocity解决poi-tl数据缺失不渲染问题</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#7-数据的可视化"><span class="toc-text">7.数据的可视化</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#编程题"><span class="toc-text">编程题</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#写一个function-利用promise-延时3s执行"><span class="toc-text">- 写一个function,利用promise 延时3s执行</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#让一个多维数组，变成一维数组"><span class="toc-text">- 让一个多维数组，变成一维数组</span></a></li></ol></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#网页加载过程"><span class="toc-text">网页加载过程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#优化策略"><span class="toc-text">优化策略</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#一、避免head标签js堵塞"><span class="toc-text">一、避免head标签js堵塞</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#所有放在head标签里面的js和css都会堵塞渲染；如果这些css和js需要加载很久的话，那么页面就空白了；"><span class="toc-text">所有放在head标签里面的js和css都会堵塞渲染；如果这些css和js需要加载很久的话，那么页面就空白了；</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#有两种解决办法"><span class="toc-text">有两种解决办法</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-把script放到body后面，这也是很多网站采取的方法。"><span class="toc-text">1.把script放到body后面，这也是很多网站采取的方法。</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-给script加defer或者async的属性，一旦script是defer或者async延迟的，那么这个script将会异步加载，但不会马上执行，会在readystatechange变为Interactive后按顺序依次执行；"><span class="toc-text">2.给script加defer或者async的属性，一旦script是defer或者async延迟的，那么这个script将会异步加载，但不会马上执行，会在readystatechange变为Interactive后按顺序依次执行；</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#两者相同点"><span class="toc-text">两者相同点</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-加载文件时不阻塞页面渲染"><span class="toc-text">1.加载文件时不阻塞页面渲染</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-对于inline的script无效"><span class="toc-text">2.对于inline的script无效</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-使用这两个属性的脚本中不能调用document-write方法"><span class="toc-text">3.使用这两个属性的脚本中不能调用document.write方法</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#4-有脚本的onload的事件回调"><span class="toc-text">4.有脚本的onload的事件回调</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#二、减少head里面的css资源"><span class="toc-text">二、减少head里面的css资源</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#css必须放在head标签里面，如果放在body里面会造成对layout好的dom进行重排造成页面闪烁；"><span class="toc-text">css必须放在head标签里面，如果放在body里面会造成对layout好的dom进行重排造成页面闪烁；</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#放在head标签里面又会堵塞页面渲染；所以要尽可能的减小css体积；"><span class="toc-text">放在head标签里面又会堵塞页面渲染；所以要尽可能的减小css体积；</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#三、延迟加载图片"><span class="toc-text">三、延迟加载图片</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#对于很多网站来说，图片汪汪是占用最多流量和带宽的资源；"><span class="toc-text">对于很多网站来说，图片汪汪是占用最多流量和带宽的资源；</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#这里没有直接给src路径，而是在页面加载完成后用js操作src，减少了页面加载图片的时间，首先把整个页面结构呈现给用户；惰性加载图片也是差不多；当用户滑动页面到一定高度时（监听scroll事件），再动态的依次对图片进行处理；"><span class="toc-text">这里没有直接给src路径，而是在页面加载完成后用js操作src，减少了页面加载图片的时间，首先把整个页面结构呈现给用户；惰性加载图片也是差不多；当用户滑动页面到一定高度时（监听scroll事件），再动态的依次对图片进行处理；</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#四、压缩和缓存"><span class="toc-text">四、压缩和缓存</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#五、DNS解析优化"><span class="toc-text">五、DNS解析优化</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#DNS查询需要花费大量时间来返回一个主机名的IP地址；"><span class="toc-text">DNS查询需要花费大量时间来返回一个主机名的IP地址；</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#在我们的网站中，可能会加载到很多个域的东西，比如引入了百度地图啊之类的sdk和一些自己的子域名服务；第一次打开网站时要做很多次DNS查找；DNS预读取能够加快网页打开时间；"><span class="toc-text">在我们的网站中，可能会加载到很多个域的东西，比如引入了百度地图啊之类的sdk和一些自己的子域名服务；第一次打开网站时要做很多次DNS查找；DNS预读取能够加快网页打开时间；</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#在head中写上几个link标签，对标签中的地址提前解析DNS，这个解析是并行发生的，不会堵塞页面渲染；"><span class="toc-text">在head中写上几个link标签，对标签中的地址提前解析DNS，这个解析是并行发生的，不会堵塞页面渲染；</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#六、其他"><span class="toc-text">六、其他</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#html别嵌套太多层，加重页面layout的压力；css选择器的合理运用，减少匹配的计算量；js中别滥用闭包，会加深作用域链，增加变量查找时间；减少http请求之类的等等；"><span class="toc-text">html别嵌套太多层，加重页面layout的压力；css选择器的合理运用，减少匹配的计算量；js中别滥用闭包，会加深作用域链，增加变量查找时间；减少http请求之类的等等；</span></a></li></ol></li></ol></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -469,7 +471,25 @@
 </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="美团一面"><a href="#美团一面" class="headerlink" title="美团一面"></a><center>美团一面</center></h3><h4 id="1-自我介绍"><a href="#1-自我介绍" class="headerlink" title="1.自我介绍"></a>1.自我介绍</h4><h4 id="2-项目中用到的es6那些语法"><a href="#2-项目中用到的es6那些语法" class="headerlink" title="2.项目中用到的es6那些语法"></a>2.项目中用到的es6那些语法</h4><h4 id="3-HTTP和HTTPS"><a href="#3-HTTP和HTTPS" class="headerlink" title="3.HTTP和HTTPS"></a>3.HTTP和HTTPS</h4><h4 id="4-常见的布局方式"><a href="#4-常见的布局方式" class="headerlink" title="4.常见的布局方式"></a>4.常见的布局方式</h4><h4 id="5-元素垂直局中"><a href="#5-元素垂直局中" class="headerlink" title="5.元素垂直局中"></a>5.元素垂直局中</h4><h4 id="6-利用velocity解决poi-tl数据缺失不渲染问题"><a href="#6-利用velocity解决poi-tl数据缺失不渲染问题" class="headerlink" title="6.利用velocity解决poi-tl数据缺失不渲染问题"></a>6.利用velocity解决poi-tl数据缺失不渲染问题</h4><h4 id="7-数据的可视化"><a href="#7-数据的可视化" class="headerlink" title="7.数据的可视化"></a>7.数据的可视化</h4><h4 id="编程题"><a href="#编程题" class="headerlink" title="编程题"></a>编程题</h4><h5 id="写一个function-利用promise-延时3s执行"><a href="#写一个function-利用promise-延时3s执行" class="headerlink" title="- 写一个function,利用promise 延时3s执行"></a>- 写一个function,利用promise 延时3s执行</h5><h5 id="让一个多维数组，变成一维数组"><a href="#让一个多维数组，变成一维数组" class="headerlink" title="- 让一个多维数组，变成一维数组"></a>- 让一个多维数组，变成一维数组</h5>
+        <h2 id="网页加载过程"><a href="#网页加载过程" class="headerlink" title="网页加载过程"></a>网页加载过程</h2><ul>
+<li><strong>1.用户在地址栏中打开一个URL，浏览器首先会寻找该URL所在服务器，通过DNS服务器查询浏览器会获得该URL所在网站的IP地址，然后向该地址发起请求，连接到服务器；</strong></li>
+<li><strong>2.建立连接后，向服务器发送http请求，请求对应的HTML文档；</strong></li>
+<li><strong>3.解析HTML文档，目的是知道该页面需要哪些资源以及生成DOM树；生成DOM树和获取到相应需要的资源文件同时进行；解析HTML文档时，一旦发现一个标签，就会根据标签的要求分配对指定的资源进行下载，当DOM树生成后，DOMContentLoaded事件被触发；</strong></li>
+<li><strong>4.Onload事件，当解析完成后，生成了DOM树，所有页面需要的资源文件都已经成功下载和执行后，浏览器会发出Onload事件并回调HTML文档中的onload函数。</strong></li>
+</ul>
+<h2 id="优化策略"><a href="#优化策略" class="headerlink" title="优化策略"></a>优化策略</h2><h3 id="一、避免head标签js堵塞"><a href="#一、避免head标签js堵塞" class="headerlink" title="一、避免head标签js堵塞"></a>一、避免head标签js堵塞</h3><h4 id="所有放在head标签里面的js和css都会堵塞渲染；如果这些css和js需要加载很久的话，那么页面就空白了；"><a href="#所有放在head标签里面的js和css都会堵塞渲染；如果这些css和js需要加载很久的话，那么页面就空白了；" class="headerlink" title="所有放在head标签里面的js和css都会堵塞渲染；如果这些css和js需要加载很久的话，那么页面就空白了；"></a>所有放在head标签里面的js和css都会堵塞渲染；如果这些css和js需要加载很久的话，那么页面就空白了；</h4><h4 id="有两种解决办法"><a href="#有两种解决办法" class="headerlink" title="有两种解决办法"></a><strong>有两种解决办法</strong></h4><ul>
+<li><h5 id="1-把script放到body后面，这也是很多网站采取的方法。"><a href="#1-把script放到body后面，这也是很多网站采取的方法。" class="headerlink" title="1.把script放到body后面，这也是很多网站采取的方法。"></a>1.把script放到body后面，这也是很多网站采取的方法。</h5></li>
+<li><h5 id="2-给script加defer或者async的属性，一旦script是defer或者async延迟的，那么这个script将会异步加载，但不会马上执行，会在readystatechange变为Interactive后按顺序依次执行；"><a href="#2-给script加defer或者async的属性，一旦script是defer或者async延迟的，那么这个script将会异步加载，但不会马上执行，会在readystatechange变为Interactive后按顺序依次执行；" class="headerlink" title="2.给script加defer或者async的属性，一旦script是defer或者async延迟的，那么这个script将会异步加载，但不会马上执行，会在readystatechange变为Interactive后按顺序依次执行；"></a>2.给script加defer或者async的属性，一旦script是defer或者async延迟的，那么这个script将会异步加载，但不会马上执行，会在readystatechange变为Interactive后按顺序依次执行；</h5></li>
+</ul>
+<h4 id="两者相同点"><a href="#两者相同点" class="headerlink" title="两者相同点"></a><strong>两者相同点</strong></h4><ul>
+<li><h5 id="1-加载文件时不阻塞页面渲染"><a href="#1-加载文件时不阻塞页面渲染" class="headerlink" title="1.加载文件时不阻塞页面渲染"></a>1.加载文件时不阻塞页面渲染</h5></li>
+<li><h5 id="2-对于inline的script无效"><a href="#2-对于inline的script无效" class="headerlink" title="2.对于inline的script无效"></a>2.对于inline的script无效</h5></li>
+<li><h5 id="3-使用这两个属性的脚本中不能调用document-write方法"><a href="#3-使用这两个属性的脚本中不能调用document-write方法" class="headerlink" title="3.使用这两个属性的脚本中不能调用document.write方法"></a>3.使用这两个属性的脚本中不能调用document.write方法</h5></li>
+<li><h5 id="4-有脚本的onload的事件回调"><a href="#4-有脚本的onload的事件回调" class="headerlink" title="4.有脚本的onload的事件回调"></a>4.有脚本的onload的事件回调</h5></li>
+</ul>
+<h3 id="二、减少head里面的css资源"><a href="#二、减少head里面的css资源" class="headerlink" title="二、减少head里面的css资源"></a>二、减少head里面的css资源</h3><h4 id="css必须放在head标签里面，如果放在body里面会造成对layout好的dom进行重排造成页面闪烁；"><a href="#css必须放在head标签里面，如果放在body里面会造成对layout好的dom进行重排造成页面闪烁；" class="headerlink" title="css必须放在head标签里面，如果放在body里面会造成对layout好的dom进行重排造成页面闪烁；"></a>css必须放在head标签里面，如果放在body里面会造成对layout好的dom进行重排造成页面闪烁；</h4><h4 id="放在head标签里面又会堵塞页面渲染；所以要尽可能的减小css体积；"><a href="#放在head标签里面又会堵塞页面渲染；所以要尽可能的减小css体积；" class="headerlink" title="放在head标签里面又会堵塞页面渲染；所以要尽可能的减小css体积；"></a>放在head标签里面又会堵塞页面渲染；所以要尽可能的减小css体积；</h4><h3 id="三、延迟加载图片"><a href="#三、延迟加载图片" class="headerlink" title="三、延迟加载图片"></a>三、延迟加载图片</h3><h4 id="对于很多网站来说，图片汪汪是占用最多流量和带宽的资源；"><a href="#对于很多网站来说，图片汪汪是占用最多流量和带宽的资源；" class="headerlink" title="对于很多网站来说，图片汪汪是占用最多流量和带宽的资源；"></a><em>对于很多网站来说，图片汪汪是占用最多流量和带宽的资源；</em></h4><p><img src="./%E5%9B%BE%E7%89%87%E5%BB%B6%E6%97%B6%E5%8A%A0%E8%BD%BD.png" alt></p>
+<h4 id="这里没有直接给src路径，而是在页面加载完成后用js操作src，减少了页面加载图片的时间，首先把整个页面结构呈现给用户；惰性加载图片也是差不多；当用户滑动页面到一定高度时（监听scroll事件），再动态的依次对图片进行处理；"><a href="#这里没有直接给src路径，而是在页面加载完成后用js操作src，减少了页面加载图片的时间，首先把整个页面结构呈现给用户；惰性加载图片也是差不多；当用户滑动页面到一定高度时（监听scroll事件），再动态的依次对图片进行处理；" class="headerlink" title="这里没有直接给src路径，而是在页面加载完成后用js操作src，减少了页面加载图片的时间，首先把整个页面结构呈现给用户；惰性加载图片也是差不多；当用户滑动页面到一定高度时（监听scroll事件），再动态的依次对图片进行处理；"></a>这里没有直接给src路径，而是在页面加载完成后用js操作src，减少了页面加载图片的时间，首先把整个页面结构呈现给用户；惰性加载图片也是差不多；当用户滑动页面到一定高度时（监听scroll事件），再动态的依次对图片进行处理；</h4><h3 id="四、压缩和缓存"><a href="#四、压缩和缓存" class="headerlink" title="四、压缩和缓存"></a>四、压缩和缓存</h3><h3 id="五、DNS解析优化"><a href="#五、DNS解析优化" class="headerlink" title="五、DNS解析优化"></a>五、DNS解析优化</h3><h4 id="DNS查询需要花费大量时间来返回一个主机名的IP地址；"><a href="#DNS查询需要花费大量时间来返回一个主机名的IP地址；" class="headerlink" title="DNS查询需要花费大量时间来返回一个主机名的IP地址；"></a><em>DNS查询需要花费大量时间来返回一个主机名的IP地址；</em></h4><h4 id="在我们的网站中，可能会加载到很多个域的东西，比如引入了百度地图啊之类的sdk和一些自己的子域名服务；第一次打开网站时要做很多次DNS查找；DNS预读取能够加快网页打开时间；"><a href="#在我们的网站中，可能会加载到很多个域的东西，比如引入了百度地图啊之类的sdk和一些自己的子域名服务；第一次打开网站时要做很多次DNS查找；DNS预读取能够加快网页打开时间；" class="headerlink" title="在我们的网站中，可能会加载到很多个域的东西，比如引入了百度地图啊之类的sdk和一些自己的子域名服务；第一次打开网站时要做很多次DNS查找；DNS预读取能够加快网页打开时间；"></a>在我们的网站中，可能会加载到很多个域的东西，比如引入了百度地图啊之类的sdk和一些自己的子域名服务；第一次打开网站时要做很多次DNS查找；DNS预读取能够加快网页打开时间；</h4><p><img src="./DNS%E9%A2%84%E8%AF%BB.png" alt></p>
+<h4 id="在head中写上几个link标签，对标签中的地址提前解析DNS，这个解析是并行发生的，不会堵塞页面渲染；"><a href="#在head中写上几个link标签，对标签中的地址提前解析DNS，这个解析是并行发生的，不会堵塞页面渲染；" class="headerlink" title="在head中写上几个link标签，对标签中的地址提前解析DNS，这个解析是并行发生的，不会堵塞页面渲染；"></a>在head中写上几个link标签，对标签中的地址提前解析DNS，这个解析是并行发生的，不会堵塞页面渲染；</h4><h3 id="六、其他"><a href="#六、其他" class="headerlink" title="六、其他"></a>六、其他</h3><h4 id="html别嵌套太多层，加重页面layout的压力；css选择器的合理运用，减少匹配的计算量；js中别滥用闭包，会加深作用域链，增加变量查找时间；减少http请求之类的等等；"><a href="#html别嵌套太多层，加重页面layout的压力；css选择器的合理运用，减少匹配的计算量；js中别滥用闭包，会加深作用域链，增加变量查找时间；减少http请求之类的等等；" class="headerlink" title="html别嵌套太多层，加重页面layout的压力；css选择器的合理运用，减少匹配的计算量；js中别滥用闭包，会加深作用域链，增加变量查找时间；减少http请求之类的等等；"></a>html别嵌套太多层，加重页面layout的压力；css选择器的合理运用，减少匹配的计算量；js中别滥用闭包，会加深作用域链，增加变量查找时间；减少http请求之类的等等；</h4>
       
        <hr><span style="font-style: italic;color: gray;"> 欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以邮件至 1396961884@qq.com </span>
     </div>
