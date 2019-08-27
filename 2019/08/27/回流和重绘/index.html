@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  <title>回流和重绘 | forgiveForever</title>
+  <meta name="keywords" content=" 回流和重绘 ">
+  <meta name="description" content="回流和重绘 | forgiveForever">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="description" content="forgiveForeverforgiveForever LQ的个人博客。 目的 为了梳理知识，便于复习、巩固学过的知识、拓宽知识面">
+<meta property="og:type" content="website">
+<meta property="og:title" content="about">
+<meta property="og:url" content="http://forgiveForever.github.io/about/index.html">
+<meta property="og:site_name" content="forgiveForever">
+<meta property="og:description" content="forgiveForeverforgiveForever LQ的个人博客。 目的 为了梳理知识，便于复习、巩固学过的知识、拓宽知识面">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-08-22T02:19:59.249Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="about">
+<meta name="twitter:description" content="forgiveForeverforgiveForever LQ的个人博客。 目的 为了梳理知识，便于复习、巩固学过的知识、拓宽知识面">
+
+
+<link rel="icon" href="/img/head.jpg">
+
+<link href="/css/style.css?v=1.0.1" rel="stylesheet">
+
+<link href="/css/hl_theme/atom-light.css?v=1.0.1" rel="stylesheet">
+
+<link href="//cdn.bootcss.com/animate.css/3.5.2/animate.min.css" rel="stylesheet">
+<link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+<script src="/js/jquery.autocomplete.min.js?v=1.0.1"></script>
+
+<script src="//cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script>
+    hljs.initHighlightingOnLoad();
+</script>
+
+<script src="//cdn.bootcss.com/nprogress/0.2.0/nprogress.min.js"></script>
+
+
+
+<script src="//cdn.bootcss.com/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+
+<script src="/js/iconfont.js?v=1.0.1"></script>
+
+</head>
+<div style="display: none">
+  <input class="theme_disqus_on" value="false">
+  <input class="theme_preload_comment" value="false">
+  <input class="theme_blog_path" value>
+</div>
+
+<body>
+<aside class="nav">
+    <div class="nav-left">
+        <a href="/" class="avatar_target">
+    <img class="avatar" src="/img/head.jpg" />
+</a>
+<div class="author">
+    <span>forgiveForever</span>
+</div>
+
+<div class="icon">
+    
+        
+        <a title="github" href="https://github.com/forgiveForever" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-github"></use>
+                </svg>
+            
+        </a>
+        
+    
+        
+        <a title="email" href="mailto:1396961884@qq.com" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-email"></use>
+                </svg>
+            
+        </a>
+        
+    
+        
+        <a title="qq" href="http://wpa.qq.com/msgrd?v=3&uin=1396961884&site=qq&menu=yes" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-qq"></use>
+                </svg>
+            
+        </a>
+        
+    
+</div>
+
+
+
+
+<ul>
+    <li><div class="all active">全部文章<small>(15)</small></div></li>
+    
+        
+            
+            <li><div data-rel="JS">JS<small>(4)</small></div>
+                
+            </li>
+            
+        
+    
+        
+            
+            <li><div data-rel="计算机网络">计算机网络<small>(3)</small></div>
+                
+            </li>
+            
+        
+    
+        
+            
+            <li><div data-rel="其他">其他<small>(2)</small></div>
+                
+            </li>
+            
+        
+    
+        
+            
+            <li><div data-rel="算法">算法<small>(3)</small></div>
+                
+            </li>
+            
+        
+    
+        
+            
+            <li><div data-rel="CSS">CSS<small>(1)</small></div>
+                
+            </li>
+            
+        
+    
+        
+            
+            <li><div data-rel="面试">面试<small>(1)</small></div>
+                
+            </li>
+            
+        
+    
+</ul>
+<div class="left-bottom">
+    <div class="menus">
+    
+    
+    
+    
+    </div>
+    <div><a class="about  hasFriend  site_url"  href="/about">关于</a><a style="width: 50%"  class="friends">友链</a></div>
+</div>
+<input type="hidden" id="yelog_site_posts_number" value="15">
+
+<div style="display: none">
+    <span id="busuanzi_value_site_uv"></span>
+    <span id="busuanzi_value_site_pv"></span>
+</div>
+
+    </div>
+    <div class="nav-right">
+        <div class="friends-area">
+    <div class="friends-title">
+        友情链接
+        <i class="back-title-list"></i>
+    </div>
+    <div class="friends-content">
+        <ul>
+            
+            <li><a target="_blank" href="https://github.com/forgiveForever">github</a></li>
+            
+        </ul>
+    </div>
+</div>
+        <div class="title-list">
+    <form onkeydown="if(event.keyCode==13){return false;}">
+        <input class="search" type="text" placeholder="以 in: 开头进行全文搜索" autocomplete="off"id="local-search-input" >
+        <i class="cross"></i>
+        <span>
+            <label for="tagswitch">Tags:</label>
+            <input id="tagswitch" type="checkbox" style="display: none" />
+            <i id="tagsWitchIcon"></i>
+        </span>
+    </form>
+    <div class="tags-list">
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">Ajax</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color2">Ajax跨域</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color2">Cookie</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">Session</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">HTTP</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color1">HTTPS</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">HTTP与HTTPS区别</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">Promise</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">异步</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">判断五大主流浏览器</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">原生JS</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">页面优化</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color2">网页加载过程</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color1">回流和重绘</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">布局</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color1">数组扁平化</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">js</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">es6</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">数组遍历</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">盒模型</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">斐波那契</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">网络协议</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">前端</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">排序算法</a>
+    </li>
+    
+    <div class="clearfix"></div>
+</div>
+
+    
+    <div id="local-search-result">
+
+    </div>
+    
+    <nav id="title-list-nav">
+        
+        <a  class="JS "
+           href="/2019/08/26/Ajax/"
+           data-tag="Ajax,Ajax跨域"
+           data-author="" >
+            <span class="post-title" title="Ajax">Ajax</span>
+            <span class="post-date" title="2019-08-25 21:13:53">2019/08/25</span>
+        </a>
+        
+        <a  class="计算机网络 "
+           href="/2019/08/24/Cookie与Session/"
+           data-tag="Cookie,Session"
+           data-author="" >
+            <span class="post-title" title="Cookie与Session">Cookie与Session</span>
+            <span class="post-date" title="2019-08-23 18:43:17">2019/08/23</span>
+        </a>
+        
+        <a  class="计算机网络 "
+           href="/2019/08/23/HTTP与HTTPS/"
+           data-tag="HTTP,HTTPS,HTTP与HTTPS区别"
+           data-author="" >
+            <span class="post-title" title="HTTP与HTTPS">HTTP与HTTPS</span>
+            <span class="post-date" title="2019-08-23 10:37:29">2019/08/23</span>
+        </a>
+        
+        <a  class="JS "
+           href="/2019/08/26/Promise/"
+           data-tag="Promise,异步"
+           data-author="" >
+            <span class="post-title" title="Promise">Promise</span>
+            <span class="post-date" title="2019-08-26 08:59:33">2019/08/26</span>
+        </a>
+        
+        <a  class="JS "
+           href="/2019/08/26/判断五大主流浏览器/"
+           data-tag="判断五大主流浏览器,原生JS"
+           data-author="" >
+            <span class="post-title" title="判断五大主流浏览器">判断五大主流浏览器</span>
+            <span class="post-date" title="2019-08-25 20:22:18">2019/08/25</span>
+        </a>
+        
+        <a  class="其他 "
+           href="/2019/08/27/前端页面优化/"
+           data-tag="页面优化,网页加载过程"
+           data-author="" >
+            <span class="post-title" title="前端页面优化">前端页面优化</span>
+            <span class="post-date" title="2019-08-26 20:40:12">2019/08/26</span>
+        </a>
+        
+        <a  class="其他 "
+           href="/2019/08/27/回流和重绘/"
+           data-tag="回流和重绘"
+           data-author="" >
+            <span class="post-title" title="回流和重绘">回流和重绘</span>
+            <span class="post-date" title="2019-08-27 14:15:56">2019/08/27</span>
+        </a>
+        
+        <a  class=""
+           href="/2019/08/24/布局/"
+           data-tag="布局"
+           data-author="" >
+            <span class="post-title" title="布局">布局</span>
+            <span class="post-date" title="2019-08-24 09:29:57">2019/08/24</span>
+        </a>
+        
+        <a  class="算法 "
+           href="/2019/08/22/数组扁平化/"
+           data-tag="数组扁平化,js"
+           data-author="" >
+            <span class="post-title" title="数组扁平化">数组扁平化</span>
+            <span class="post-date" title="2019-08-22 15:46:24">2019/08/22</span>
+        </a>
+        
+        <a  class="JS "
+           href="/2019/08/27/数组遍历/"
+           data-tag="es6,数组遍历"
+           data-author="" >
+            <span class="post-title" title="数组遍历">数组遍历</span>
+            <span class="post-date" title="2019-08-26 20:08:08">2019/08/26</span>
+        </a>
+        
+        <a  class="CSS "
+           href="/2019/08/24/盒模型/"
+           data-tag="盒模型"
+           data-author="" >
+            <span class="post-title" title="盒模型">盒模型</span>
+            <span class="post-date" title="2019-08-23 19:37:16">2019/08/23</span>
+        </a>
+        
+        <a  class="算法 "
+           href="/2019/08/23/斐波那契/"
+           data-tag="js,斐波那契"
+           data-author="" >
+            <span class="post-title" title="斐波那契">斐波那契</span>
+            <span class="post-date" title="2019-08-22 16:58:49">2019/08/22</span>
+        </a>
+        
+        <a  class="计算机网络 "
+           href="/2019/08/23/网络协议/"
+           data-tag="网络协议"
+           data-author="" >
+            <span class="post-title" title="网络协议">网络协议</span>
+            <span class="post-date" title="2019-08-23 14:12:21">2019/08/23</span>
+        </a>
+        
+        <a  class="面试 "
+           href="/2019/08/22/美团一面/"
+           data-tag="前端"
+           data-author="" >
+            <span class="post-title" title="美团一面">美团一面</span>
+            <span class="post-date" title="2019-08-22 13:26:16">2019/08/22</span>
+        </a>
+        
+        <a  class="算法 "
+           href="/2019/08/22/排序算法/"
+           data-tag="排序算法"
+           data-author="" >
+            <span class="post-title" title="排序算法">排序算法</span>
+            <span class="post-date" title="2019-08-22 14:17:58">2019/08/22</span>
+        </a>
+        
+    </nav>
+</div>
+    </div>
+    <div class="hide-list">
+        <div class="semicircle">
+            <div class="brackets first"><</div>
+            <div class="brackets">&gt;</div>
+        </div>
+    </div>
+</aside>
+<div class="post">
+    <div class="pjax">
+        <article id="其他-回流和重绘" class="article article-type-其他" itemscope itemprop="blogPost">
+    
+        <h1 class="article-title">回流和重绘</h1>
+    
+    <div class="article-meta">
+        
+        
+        
+        <span class="book">
+            
+                <a href="javascript:" data-rel="其他">其他</a>
+            
+        </span>
+        
+        
+        <span class="tag">
+            
+            <a href="javascript:" class="color1">回流和重绘</a>
+            
+        </span>
+        
+    </div>
+    <div class="article-meta">
+        
+        创建时间:<time class="date" title='更新时间: 2019-08-27 06:31:22'>2019-08-27 14:15</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        
+        
+    </div>
+    
+    <div class="toc-ref">
+    
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#前言"><span class="toc-text">前言</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#在讨论回流与重绘之前，我们要知道："><span class="toc-text">在讨论回流与重绘之前，我们要知道：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-浏览器使用流式布局模型-Flow-Based-Layout-。"><span class="toc-text">1.浏览器使用流式布局模型 (Flow Based Layout)。</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-浏览器会把HTML解析成DOM，把CSS解析成CSSOM，DOM和CSSOM合并就产生了Render-Tree。"><span class="toc-text">2.浏览器会把HTML解析成DOM，把CSS解析成CSSOM，DOM和CSSOM合并就产生了Render Tree。</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-有了RenderTree，我们就知道了所有节点的样式，然后计算他们在页面上的大小和位置，最后把节点绘制到页面上。"><span class="toc-text">3.有了RenderTree，我们就知道了所有节点的样式，然后计算他们在页面上的大小和位置，最后把节点绘制到页面上。</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-由于浏览器使用流式布局，对Render-Tree的计算通常只需要遍历一次就可以完成，但table及其内部元素除外，他们可能需要多次计算，通常要花3倍于同等元素的时间，这也是为什么要避免使用table布局的原因之一。"><span class="toc-text">4.由于浏览器使用流式布局，对Render Tree的计算通常只需要遍历一次就可以完成，但table及其内部元素除外，他们可能需要多次计算，通常要花3倍于同等元素的时间，这也是为什么要避免使用table布局的原因之一。</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#回流-Reflow"><span class="toc-text">回流 (Reflow)</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#会导致回流的操作："><span class="toc-text">会导致回流的操作：</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#页面首次渲染"><span class="toc-text">页面首次渲染</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#浏览器窗口大小发生改变"><span class="toc-text">浏览器窗口大小发生改变</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#元素尺寸或位置发生改变"><span class="toc-text">元素尺寸或位置发生改变</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#元素内容变化（文字数量或图片大小等等）"><span class="toc-text">元素内容变化（文字数量或图片大小等等）</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#元素字体大小变化"><span class="toc-text">元素字体大小变化</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#添加或者删除可见的DOM元素"><span class="toc-text">添加或者删除可见的DOM元素</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#激活CSS伪类（例如：-hover）"><span class="toc-text">激活CSS伪类（例如：:hover）</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#查询某些属性或调用某些方法"><span class="toc-text">查询某些属性或调用某些方法</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#一些常用且会导致回流的属性和方法："><span class="toc-text">一些常用且会导致回流的属性和方法：</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#clientWidth、clientHeight、clientTop、clientLeft"><span class="toc-text">clientWidth、clientHeight、clientTop、clientLeft</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#offsetWidth、offsetHeight、offsetTop、offsetLeft"><span class="toc-text">offsetWidth、offsetHeight、offsetTop、offsetLeft</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#scrollWidth、scrollHeight、scrollTop、scrollLeft"><span class="toc-text">scrollWidth、scrollHeight、scrollTop、scrollLeft</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#scrollIntoView-、scrollIntoViewIfNeeded"><span class="toc-text">scrollIntoView()、scrollIntoViewIfNeeded()</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#getComputedStyle"><span class="toc-text">getComputedStyle()</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#getBoundingClientRect"><span class="toc-text">getBoundingClientRect()</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#scrollTo"><span class="toc-text">scrollTo()</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#重绘-Repaint"><span class="toc-text">重绘 (Repaint)</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#性能影响"><span class="toc-text">性能影响</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#当你访问以下属性或方法时，浏览器会立刻清空队列："><span class="toc-text">当你访问以下属性或方法时，浏览器会立刻清空队列：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#clientWidth、clientHeight、clientTop、clientLeft-1"><span class="toc-text">clientWidth、clientHeight、clientTop、clientLeft</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#offsetWidth、offsetHeight、offsetTop、offsetLeft-1"><span class="toc-text">offsetWidth、offsetHeight、offsetTop、offsetLeft</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#scrollWidth、scrollHeight、scrollTop、scrollLeft-1"><span class="toc-text">scrollWidth、scrollHeight、scrollTop、scrollLeft</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#width、height"><span class="toc-text">width、height</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#getComputedStyle-1"><span class="toc-text">getComputedStyle()</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#getBoundingClientRect-1"><span class="toc-text">getBoundingClientRect()</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#如何避免"><span class="toc-text">如何避免</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#CSS"><span class="toc-text">CSS</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#避免使用table布局。"><span class="toc-text">避免使用table布局。</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#尽可能在DOM树的最末端改变class。"><span class="toc-text">尽可能在DOM树的最末端改变class。</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#避免设置多层内联样式。"><span class="toc-text">避免设置多层内联样式。</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#将动画效果应用到position属性为absolute或fixed的元素上。"><span class="toc-text">将动画效果应用到position属性为absolute或fixed的元素上。</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#避免使用CSS表达式（例如：calc-）。"><span class="toc-text">避免使用CSS表达式（例如：calc()）。</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#JavaScript"><span class="toc-text">JavaScript</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#避免频繁操作样式，最好一次性重写style属性，或者将样式列表定义为class并一次性更改class属性。"><span class="toc-text">避免频繁操作样式，最好一次性重写style属性，或者将样式列表定义为class并一次性更改class属性。</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#避免频繁操作DOM，创建一个documentFragment，在它上面应用所有DOM操作，最后再把它添加到文档中。"><span class="toc-text">避免频繁操作DOM，创建一个documentFragment，在它上面应用所有DOM操作，最后再把它添加到文档中。</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#也可以先为元素设置display-none，操作结束后再把它显示出来。因为在display属性为none的元素上进行的DOM操作不会引发回流和重绘。"><span class="toc-text">也可以先为元素设置display: none，操作结束后再把它显示出来。因为在display属性为none的元素上进行的DOM操作不会引发回流和重绘。</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#避免频繁读取会引发回流-重绘的属性，如果确实需要多次使用，就用一个变量缓存起来。"><span class="toc-text">避免频繁读取会引发回流/重绘的属性，如果确实需要多次使用，就用一个变量缓存起来。</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#对具有复杂动画的元素使用绝对定位，使它脱离文档流，否则会引起父元素及后续元素频繁回流。"><span class="toc-text">对具有复杂动画的元素使用绝对定位，使它脱离文档流，否则会引起父元素及后续元素频繁回流。</span></a></li></ol></li></ol></li></ol>
+    
+<style>
+    .left-col .switch-btn,
+    .left-col .switch-area {
+        display: none;
+    }
+    .toc-level-3 i,
+    .toc-level-3 ol {
+        display: none !important;
+    }
+</style>
+</div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><h4 id="在讨论回流与重绘之前，我们要知道："><a href="#在讨论回流与重绘之前，我们要知道：" class="headerlink" title="在讨论回流与重绘之前，我们要知道："></a>在讨论回流与重绘之前，我们要知道：</h4><ul>
+<li><h4 id="1-浏览器使用流式布局模型-Flow-Based-Layout-。"><a href="#1-浏览器使用流式布局模型-Flow-Based-Layout-。" class="headerlink" title="1.浏览器使用流式布局模型 (Flow Based Layout)。"></a>1.浏览器使用流式布局模型 (Flow Based Layout)。</h4></li>
+<li><h4 id="2-浏览器会把HTML解析成DOM，把CSS解析成CSSOM，DOM和CSSOM合并就产生了Render-Tree。"><a href="#2-浏览器会把HTML解析成DOM，把CSS解析成CSSOM，DOM和CSSOM合并就产生了Render-Tree。" class="headerlink" title="2.浏览器会把HTML解析成DOM，把CSS解析成CSSOM，DOM和CSSOM合并就产生了Render Tree。"></a>2.浏览器会把HTML解析成DOM，把CSS解析成CSSOM，DOM和CSSOM合并就产生了Render Tree。</h4></li>
+<li><h4 id="3-有了RenderTree，我们就知道了所有节点的样式，然后计算他们在页面上的大小和位置，最后把节点绘制到页面上。"><a href="#3-有了RenderTree，我们就知道了所有节点的样式，然后计算他们在页面上的大小和位置，最后把节点绘制到页面上。" class="headerlink" title="3.有了RenderTree，我们就知道了所有节点的样式，然后计算他们在页面上的大小和位置，最后把节点绘制到页面上。"></a>3.有了RenderTree，我们就知道了所有节点的样式，然后计算他们在页面上的大小和位置，最后把节点绘制到页面上。</h4></li>
+<li><h4 id="4-由于浏览器使用流式布局，对Render-Tree的计算通常只需要遍历一次就可以完成，但table及其内部元素除外，他们可能需要多次计算，通常要花3倍于同等元素的时间，这也是为什么要避免使用table布局的原因之一。"><a href="#4-由于浏览器使用流式布局，对Render-Tree的计算通常只需要遍历一次就可以完成，但table及其内部元素除外，他们可能需要多次计算，通常要花3倍于同等元素的时间，这也是为什么要避免使用table布局的原因之一。" class="headerlink" title="4.由于浏览器使用流式布局，对Render Tree的计算通常只需要遍历一次就可以完成，但table及其内部元素除外，他们可能需要多次计算，通常要花3倍于同等元素的时间，这也是为什么要避免使用table布局的原因之一。"></a>4.由于浏览器使用流式布局，对Render Tree的计算通常只需要遍历一次就可以完成，但table及其内部元素除外，他们可能需要多次计算，通常要花3倍于同等元素的时间，这也是为什么要避免使用table布局的原因之一。</h4></li>
+</ul>
+<p><strong>一句话：回流必将引起重绘，重绘不一定会引起回流。</strong></p>
+<hr>
+<h3 id="回流-Reflow"><a href="#回流-Reflow" class="headerlink" title="回流 (Reflow)"></a>回流 (Reflow)</h3><p><strong>当Render Tree中部分或全部元素的尺寸、结构、或某些属性发生改变时，浏览器重新渲染部分或全部文档的过程称为回流。</strong></p>
+<h4 id="会导致回流的操作："><a href="#会导致回流的操作：" class="headerlink" title="会导致回流的操作："></a>会导致回流的操作：</h4><ul>
+<li><h5 id="页面首次渲染"><a href="#页面首次渲染" class="headerlink" title="页面首次渲染"></a>页面首次渲染</h5></li>
+<li><h5 id="浏览器窗口大小发生改变"><a href="#浏览器窗口大小发生改变" class="headerlink" title="浏览器窗口大小发生改变"></a>浏览器窗口大小发生改变</h5></li>
+<li><h5 id="元素尺寸或位置发生改变"><a href="#元素尺寸或位置发生改变" class="headerlink" title="元素尺寸或位置发生改变"></a>元素尺寸或位置发生改变</h5></li>
+<li><h5 id="元素内容变化（文字数量或图片大小等等）"><a href="#元素内容变化（文字数量或图片大小等等）" class="headerlink" title="元素内容变化（文字数量或图片大小等等）"></a>元素内容变化（文字数量或图片大小等等）</h5></li>
+<li><h5 id="元素字体大小变化"><a href="#元素字体大小变化" class="headerlink" title="元素字体大小变化"></a>元素字体大小变化</h5></li>
+<li><h5 id="添加或者删除可见的DOM元素"><a href="#添加或者删除可见的DOM元素" class="headerlink" title="添加或者删除可见的DOM元素"></a>添加或者删除可见的DOM元素</h5></li>
+<li><h5 id="激活CSS伪类（例如：-hover）"><a href="#激活CSS伪类（例如：-hover）" class="headerlink" title="激活CSS伪类（例如：:hover）"></a>激活CSS伪类（例如：:hover）</h5></li>
+<li><h5 id="查询某些属性或调用某些方法"><a href="#查询某些属性或调用某些方法" class="headerlink" title="查询某些属性或调用某些方法"></a>查询某些属性或调用某些方法</h5></li>
+</ul>
+<h4 id="一些常用且会导致回流的属性和方法："><a href="#一些常用且会导致回流的属性和方法：" class="headerlink" title="一些常用且会导致回流的属性和方法："></a>一些常用且会导致回流的属性和方法：</h4><ul>
+<li><h5 id="clientWidth、clientHeight、clientTop、clientLeft"><a href="#clientWidth、clientHeight、clientTop、clientLeft" class="headerlink" title="clientWidth、clientHeight、clientTop、clientLeft"></a>clientWidth、clientHeight、clientTop、clientLeft</h5></li>
+<li><h5 id="offsetWidth、offsetHeight、offsetTop、offsetLeft"><a href="#offsetWidth、offsetHeight、offsetTop、offsetLeft" class="headerlink" title="offsetWidth、offsetHeight、offsetTop、offsetLeft"></a>offsetWidth、offsetHeight、offsetTop、offsetLeft</h5></li>
+<li><h5 id="scrollWidth、scrollHeight、scrollTop、scrollLeft"><a href="#scrollWidth、scrollHeight、scrollTop、scrollLeft" class="headerlink" title="scrollWidth、scrollHeight、scrollTop、scrollLeft"></a>scrollWidth、scrollHeight、scrollTop、scrollLeft</h5></li>
+<li><h5 id="scrollIntoView-、scrollIntoViewIfNeeded"><a href="#scrollIntoView-、scrollIntoViewIfNeeded" class="headerlink" title="scrollIntoView()、scrollIntoViewIfNeeded()"></a>scrollIntoView()、scrollIntoViewIfNeeded()</h5></li>
+<li><h5 id="getComputedStyle"><a href="#getComputedStyle" class="headerlink" title="getComputedStyle()"></a>getComputedStyle()</h5></li>
+<li><h5 id="getBoundingClientRect"><a href="#getBoundingClientRect" class="headerlink" title="getBoundingClientRect()"></a>getBoundingClientRect()</h5></li>
+<li><h5 id="scrollTo"><a href="#scrollTo" class="headerlink" title="scrollTo()"></a>scrollTo()</h5></li>
+</ul>
+<h3 id="重绘-Repaint"><a href="#重绘-Repaint" class="headerlink" title="重绘 (Repaint)"></a>重绘 (Repaint)</h3><p><strong>当页面中元素样式的改变并不影响它在文档流中的位置时（例如：color、background-color、visibility等），浏览器会将新样式赋予给元素并重新绘制它，这个过程称为重绘。</strong></p>
+<h4 id="性能影响"><a href="#性能影响" class="headerlink" title="性能影响"></a>性能影响</h4><p><strong>回流比重绘的代价要更高。</strong><br>有时即使仅仅回流一个单一的元素，它的父元素以及任何跟随它的元素也会产生回流。<br><strong>现代浏览器会对频繁的回流或重绘操作进行优化：</strong><br>浏览器会维护一个队列，把所有引起回流和重绘的操作放入队列中，如果队列中的任务数量或者时间间隔达到一个阈值的，浏览器就会将队列清空，进行一次批处理，这样可以把多次回流和重绘变成一次。</p>
+<h5 id="当你访问以下属性或方法时，浏览器会立刻清空队列："><a href="#当你访问以下属性或方法时，浏览器会立刻清空队列：" class="headerlink" title="当你访问以下属性或方法时，浏览器会立刻清空队列："></a>当你访问以下属性或方法时，浏览器会立刻清空队列：</h5><ul>
+<li><h5 id="clientWidth、clientHeight、clientTop、clientLeft-1"><a href="#clientWidth、clientHeight、clientTop、clientLeft-1" class="headerlink" title="clientWidth、clientHeight、clientTop、clientLeft"></a>clientWidth、clientHeight、clientTop、clientLeft</h5></li>
+<li><h5 id="offsetWidth、offsetHeight、offsetTop、offsetLeft-1"><a href="#offsetWidth、offsetHeight、offsetTop、offsetLeft-1" class="headerlink" title="offsetWidth、offsetHeight、offsetTop、offsetLeft"></a>offsetWidth、offsetHeight、offsetTop、offsetLeft</h5></li>
+<li><h5 id="scrollWidth、scrollHeight、scrollTop、scrollLeft-1"><a href="#scrollWidth、scrollHeight、scrollTop、scrollLeft-1" class="headerlink" title="scrollWidth、scrollHeight、scrollTop、scrollLeft"></a>scrollWidth、scrollHeight、scrollTop、scrollLeft</h5></li>
+<li><h5 id="width、height"><a href="#width、height" class="headerlink" title="width、height"></a>width、height</h5></li>
+<li><h5 id="getComputedStyle-1"><a href="#getComputedStyle-1" class="headerlink" title="getComputedStyle()"></a>getComputedStyle()</h5></li>
+<li><h5 id="getBoundingClientRect-1"><a href="#getBoundingClientRect-1" class="headerlink" title="getBoundingClientRect()"></a>getBoundingClientRect()</h5></li>
+</ul>
+<p>因为队列中可能会有影响到这些属性或方法返回值的操作，即使你希望获取的信息与队列中操作引发的改变无关，浏览器也会强行清空队列，确保你拿到的值是最精确的。</p>
+<h3 id="如何避免"><a href="#如何避免" class="headerlink" title="如何避免"></a>如何避免</h3><h4 id="CSS"><a href="#CSS" class="headerlink" title="CSS"></a>CSS</h4><ul>
+<li><h5 id="避免使用table布局。"><a href="#避免使用table布局。" class="headerlink" title="避免使用table布局。"></a>避免使用table布局。</h5></li>
+<li><h5 id="尽可能在DOM树的最末端改变class。"><a href="#尽可能在DOM树的最末端改变class。" class="headerlink" title="尽可能在DOM树的最末端改变class。"></a>尽可能在DOM树的最末端改变class。</h5></li>
+<li><h5 id="避免设置多层内联样式。"><a href="#避免设置多层内联样式。" class="headerlink" title="避免设置多层内联样式。"></a>避免设置多层内联样式。</h5></li>
+<li><h5 id="将动画效果应用到position属性为absolute或fixed的元素上。"><a href="#将动画效果应用到position属性为absolute或fixed的元素上。" class="headerlink" title="将动画效果应用到position属性为absolute或fixed的元素上。"></a>将动画效果应用到position属性为absolute或fixed的元素上。</h5></li>
+<li><h5 id="避免使用CSS表达式（例如：calc-）。"><a href="#避免使用CSS表达式（例如：calc-）。" class="headerlink" title="避免使用CSS表达式（例如：calc()）。"></a>避免使用CSS表达式（例如：calc()）。</h5></li>
+</ul>
+<h4 id="JavaScript"><a href="#JavaScript" class="headerlink" title="JavaScript"></a>JavaScript</h4><ul>
+<li><h5 id="避免频繁操作样式，最好一次性重写style属性，或者将样式列表定义为class并一次性更改class属性。"><a href="#避免频繁操作样式，最好一次性重写style属性，或者将样式列表定义为class并一次性更改class属性。" class="headerlink" title="避免频繁操作样式，最好一次性重写style属性，或者将样式列表定义为class并一次性更改class属性。"></a>避免频繁操作样式，最好一次性重写style属性，或者将样式列表定义为class并一次性更改class属性。</h5></li>
+<li><h5 id="避免频繁操作DOM，创建一个documentFragment，在它上面应用所有DOM操作，最后再把它添加到文档中。"><a href="#避免频繁操作DOM，创建一个documentFragment，在它上面应用所有DOM操作，最后再把它添加到文档中。" class="headerlink" title="避免频繁操作DOM，创建一个documentFragment，在它上面应用所有DOM操作，最后再把它添加到文档中。"></a>避免频繁操作DOM，创建一个documentFragment，在它上面应用所有DOM操作，最后再把它添加到文档中。</h5></li>
+<li><h5 id="也可以先为元素设置display-none，操作结束后再把它显示出来。因为在display属性为none的元素上进行的DOM操作不会引发回流和重绘。"><a href="#也可以先为元素设置display-none，操作结束后再把它显示出来。因为在display属性为none的元素上进行的DOM操作不会引发回流和重绘。" class="headerlink" title="也可以先为元素设置display: none，操作结束后再把它显示出来。因为在display属性为none的元素上进行的DOM操作不会引发回流和重绘。"></a>也可以先为元素设置display: none，操作结束后再把它显示出来。因为在display属性为none的元素上进行的DOM操作不会引发回流和重绘。</h5></li>
+<li><h5 id="避免频繁读取会引发回流-重绘的属性，如果确实需要多次使用，就用一个变量缓存起来。"><a href="#避免频繁读取会引发回流-重绘的属性，如果确实需要多次使用，就用一个变量缓存起来。" class="headerlink" title="避免频繁读取会引发回流/重绘的属性，如果确实需要多次使用，就用一个变量缓存起来。"></a>避免频繁读取会引发回流/重绘的属性，如果确实需要多次使用，就用一个变量缓存起来。</h5></li>
+<li><h5 id="对具有复杂动画的元素使用绝对定位，使它脱离文档流，否则会引起父元素及后续元素频繁回流。"><a href="#对具有复杂动画的元素使用绝对定位，使它脱离文档流，否则会引起父元素及后续元素频繁回流。" class="headerlink" title="对具有复杂动画的元素使用绝对定位，使它脱离文档流，否则会引起父元素及后续元素频繁回流。"></a>对具有复杂动画的元素使用绝对定位，使它脱离文档流，否则会引起父元素及后续元素频繁回流。</h5></li>
+</ul>
+
+      
+       <hr><span style="font-style: italic;color: gray;"> 欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以邮件至 1396961884@qq.com </span>
+    </div>
+</article>
+
+
+
+
+
+
+
+    
+
+
+
+
+    </div>
+    <div class="copyright">
+        <p class="footer-entry">©2016-2020 forgiveForever</p>
+<p class="footer-entry">Built with <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/yelog/hexo-theme-3-hexo" target="_blank">3-hexo</a> theme</p>
+
+    </div>
+    <div class="full-toc">
+        <button class="full"><span class="min "></span></button>
+<button class="post-toc-menu"><span class="post-toc-menu-icons"></span></button>
+<div class="post-toc"><span class="post-toc-title">目录</span>
+    <div class="post-toc-content">
+
+    </div>
+</div>
+<a class="" id="rocket" href="javascript:void(0)"></a>
+    </div>
+</div>
+<div class="acParent"></div>
+
+</body>
+<script src="//cdn.bootcss.com/jquery.pjax/2.0.1/jquery.pjax.min.js"></script>
+
+<script src="/js/script.js?v=1.0.1" ></script>
+<script>
+    var img_resize = 'default';
+    /*作者、标签的自动补全*/
+    $(function () {
+        $('.search').AutoComplete({
+            'data': ['#Ajax','#Ajax跨域','#Cookie','#Session','#HTTP','#HTTPS','#HTTP与HTTPS区别','#Promise','#异步','#判断五大主流浏览器','#原生JS','#页面优化','#网页加载过程','#回流和重绘','#布局','#数组扁平化','#js','#es6','#数组遍历','#盒模型','#斐波那契','#网络协议','#前端','#排序算法',],
+            'itemHeight': 20,
+            'width': 418
+        }).AutoComplete('show');
+    })
+    function initArticle() {
+        /*渲染对应的表格样式*/
+        
+            $(".post .pjax table").addClass("green_title");
+        
+
+        /*渲染打赏样式*/
+        
+
+        /*高亮代码块行号*/
+        
+        $('pre code').each(function(){
+            var lines = $(this).text().split('\n').length - 1, widther='';
+            if (lines>99) {
+                widther = 'widther'
+            }
+            var $numbering = $('<ul/>').addClass('pre-numbering ' + widther).attr("unselectable","on");
+            $(this).addClass('has-numbering ' + widther)
+                    .parent()
+                    .append($numbering);
+            for(var i=1;i<=lines;i++){
+                $numbering.append($('<li/>').text(i));
+            }
+        });
+        
+
+        /*访问数量*/
+        
+
+        /*代码高亮，行号对齐*/
+        $('.pre-numbering').css('line-height',$('.has-numbering').css('line-height'));
+
+        
+    }
+
+    /*打赏页面隐藏与展示*/
+    
+
+</script>
+
+<!--加入行号的高亮代码块样式-->
+
+<style>
+    pre{
+        position: relative;
+        margin-bottom: 24px;
+        border-radius: 10px;
+        border: 1px solid #e2dede;
+        background: #FFF;
+        overflow: hidden;
+    }
+    code.has-numbering{
+        margin-left: 30px;
+    }
+    code.has-numbering.widther{
+        margin-left: 35px;
+    }
+    .pre-numbering{
+        margin: 0px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 20px;
+        padding: 0.5em 3px 0.7em 5px;
+        border-right: 1px solid #C3CCD0;
+        text-align: right;
+        color: #AAA;
+        background-color: #fafafa;
+    }
+    .pre-numbering.widther {
+        width: 35px;
+    }
+</style>
+
+<!--自定义样式设置-->
+<style>
+    
+    
+    .nav {
+        width: 542px;
+    }
+    .nav.fullscreen {
+        margin-left: -542px;
+    }
+    .nav-left {
+        width: 120px;
+    }
+    
+    
+    @media screen and (max-width: 1468px) {
+        .nav {
+            width: 492px;
+        }
+        .nav.fullscreen {
+            margin-left: -492px;
+        }
+        .nav-left {
+            width: 100px;
+        }
+    }
+    
+    
+    @media screen and (max-width: 1024px) {
+        .nav {
+            width: 492px;
+            margin-left: -492px
+        }
+        .nav.fullscreen {
+            margin-left: 0;
+        }
+        .nav .hide-list.fullscreen {
+            left: 492px
+        }
+    }
+    
+    @media screen and (max-width: 426px) {
+        .nav {
+            width: 100%;
+        }
+        .nav-left {
+            width: 100%;
+        }
+    }
+    
+    
+    .nav-right .title-list nav a .post-title, .nav-right .title-list #local-search-result a .post-title {
+        color: #383636;
+    }
+    
+    
+    .nav-right .title-list nav a .post-date, .nav-right .title-list #local-search-result a .post-date {
+        color: #5e5e5f;
+    }
+    
+    
+    .nav-right nav a.hover, #local-search-result a.hover{
+        background-color: #e2e0e0;
+    }
+    
+    
+
+    /*列表样式*/
+    
+    .post .pjax article .article-entry>ol, .post .pjax article .article-entry>ul, .post .pjax article>ol, .post .pjax article>ul{
+        border: #e2dede solid 1px;
+        border-radius: 10px;
+        padding: 10px 32px 10px 56px;
+    }
+    .post .pjax article .article-entry li>ol, .post .pjax article .article-entry li>ul,.post .pjax article li>ol, .post .pjax article li>ul{
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+    .post .pjax article .article-entry>ol>li, .post .pjax article .article-entry>ul>li,.post .pjax article>ol>li, .post .pjax article>ul>li{
+        margin-bottom: auto;
+        margin-left: auto;
+    }
+    .post .pjax article .article-entry li>ol>li, .post .pjax article .article-entry li>ul>li,.post .pjax article li>ol>li, .post .pjax article li>ul>li{
+        margin-bottom: auto;
+        margin-left: auto;
+    }
+    
+
+    /* 背景图样式 */
+    
+    
+
+
+    /*引用块样式*/
+    
+
+    /*文章列表背景图*/
+    
+    .nav-right:before {
+        content: ' ';
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0.3;
+        background: url("https://i.loli.net/2019/07/22/5d3521411f3f169375.png");
+        background-repeat: no-repeat;
+        background-position: 50% 0;
+        -ms-background-size: cover;
+        -o-background-size: cover;
+        -moz-background-size: cover;
+        -webkit-background-size: cover;
+        background-size: cover;
+    }
+    
+
+    
+</style>
+
+
+
+
+
+
+
+</html>
