@@ -2,9 +2,9 @@
 <html>
 <head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="utf-8">
-  <title>虚拟DOM | forgiveForever</title>
-  <meta name="keywords" content=" 虚拟DOM ">
-  <meta name="description" content="虚拟DOM | forgiveForever">
+  <title>cookie跨域 | forgiveForever</title>
+  <meta name="keywords" content=" cookie跨域 ">
+  <meta name="description" content="cookie跨域 | forgiveForever">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="forgiveForeverforgiveForever LQ的个人博客。 目的 为了梳理知识，便于复习、巩固学过的知识、拓宽知识面">
 <meta property="og:type" content="website">
@@ -531,9 +531,9 @@
 </aside>
 <div class="post">
     <div class="pjax">
-        <article id="vue-虚拟DOM" class="article article-type-vue" itemscope itemprop="blogPost">
+        <article id="js-cookie跨域" class="article article-type-js" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">虚拟DOM</h1>
+        <h1 class="article-title">cookie跨域</h1>
     
     <div class="article-meta">
         
@@ -541,21 +541,21 @@
         
         <span class="book">
             
-                <a href="javascript:" data-rel="VUE">VUE</a>
+                <a href="javascript:" data-rel="JS">JS</a>
             
         </span>
         
         
         <span class="tag">
             
-            <a href="javascript:" class="color1">虚拟DOM</a>
+            <a href="javascript:" class="color4">cookie跨域</a>
             
         </span>
         
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title='更新时间: 2019-08-30 13:37:56'>2019-08-30 20:56</time>
+        创建时间:<time class="date" title='更新时间: 2019-09-01 07:08:10'>2019-09-01 13:51</time>
         
     </div>
     <div class="article-meta">
@@ -566,7 +566,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#什么时虚拟DOM"><span class="toc-text">什么时虚拟DOM</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#vdom可以看作是一个使用javascript模拟了DOM结构的树形结构，这个树结构包含整个DOM结构的信息，如下图："><span class="toc-text">vdom可以看作是一个使用javascript模拟了DOM结构的树形结构，这个树结构包含整个DOM结构的信息，如下图：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#可见左边的DOM结构，不论是标签名称还是标签的属性或标签的子集，都会对应在右边的树结构里。"><span class="toc-text">可见左边的DOM结构，不论是标签名称还是标签的属性或标签的子集，都会对应在右边的树结构里。</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#为什么要使用虚拟DOM"><span class="toc-text">为什么要使用虚拟DOM</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#虚拟DOM实现"><span class="toc-text">虚拟DOM实现</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#DFS-深度遍历"><span class="toc-text">DFS(深度遍历)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#BFS-广度遍历"><span class="toc-text">BFS(广度遍历)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#DOM更新"><span class="toc-text">DOM更新</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#DOM更新，无外乎四种情况，如下："><span class="toc-text">DOM更新，无外乎四种情况，如下：</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#毫无疑问，遍历DOM树仍然采用DFS遍历。"><span class="toc-text">毫无疑问，遍历DOM树仍然采用DFS遍历。</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#因为我们要将变化的节点更新到真实DOM中，所以还得传入真实的DOM根节点，并且真实的DOM节点与虚拟的DOM节点，树形结构一致，故通过标记可以记录节点变化位置，如下："><span class="toc-text">因为我们要将变化的节点更新到真实DOM中，所以还得传入真实的DOM根节点，并且真实的DOM节点与虚拟的DOM节点，树形结构一致，故通过标记可以记录节点变化位置，如下：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#实现函数如下："><span class="toc-text">实现函数如下：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#其中的changed方法，简单实现如下："><span class="toc-text">其中的changed方法，简单实现如下：</span></a></li></ol></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#如何让CORS携带Cookie"><span class="toc-text">如何让CORS携带Cookie</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#如何让Jquery的AJAX使用CORS时携带Cookie"><span class="toc-text">如何让Jquery的AJAX使用CORS时携带Cookie</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#VUE中axios携带cookie"><span class="toc-text">VUE中axios携带cookie</span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -581,35 +581,21 @@
 </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="什么时虚拟DOM"><a href="#什么时虚拟DOM" class="headerlink" title="什么时虚拟DOM"></a>什么时虚拟DOM</h3><h4 id="vdom可以看作是一个使用javascript模拟了DOM结构的树形结构，这个树结构包含整个DOM结构的信息，如下图："><a href="#vdom可以看作是一个使用javascript模拟了DOM结构的树形结构，这个树结构包含整个DOM结构的信息，如下图：" class="headerlink" title="vdom可以看作是一个使用javascript模拟了DOM结构的树形结构，这个树结构包含整个DOM结构的信息，如下图："></a>vdom可以看作是一个使用javascript模拟了DOM结构的树形结构，这个树结构包含整个DOM结构的信息，如下图：</h4><p><img src="./%E8%99%9A%E6%8B%9FDOM.png" alt></p>
-<h4 id="可见左边的DOM结构，不论是标签名称还是标签的属性或标签的子集，都会对应在右边的树结构里。"><a href="#可见左边的DOM结构，不论是标签名称还是标签的属性或标签的子集，都会对应在右边的树结构里。" class="headerlink" title="可见左边的DOM结构，不论是标签名称还是标签的属性或标签的子集，都会对应在右边的树结构里。"></a>可见左边的DOM结构，不论是标签名称还是标签的属性或标签的子集，都会对应在右边的树结构里。</h4><h3 id="为什么要使用虚拟DOM"><a href="#为什么要使用虚拟DOM" class="headerlink" title="为什么要使用虚拟DOM"></a>为什么要使用虚拟DOM</h3><p><strong>&emsp;&emsp;之前使用原生js或者jquery写页面的时候会发现操作DOM是一件非常麻烦的一件事情，往往是DOM标签和js逻辑同时写在js文件里，数据交互时不时还要写很多的input隐藏域，如果没有好的代码规范的话会显得代码非常冗余混乱，耦合性高并且难以维护。</strong><br><strong>&emsp;&emsp;另外一方面在浏览器里一遍又一遍的渲染DOM是非常非常消耗性能的，常常会出现页面卡死的情况；所以尽量减少对DOM的操作成为了优化前端性能的必要手段，vdom就是将DOM的对比放在了js层，通过对比不同之处来选择新渲染DOM节点，从而提高渲染效率。</strong></p>
-<h3 id="虚拟DOM实现"><a href="#虚拟DOM实现" class="headerlink" title="虚拟DOM实现"></a>虚拟DOM实现</h3><p><em>1. 通过JavaScript来构建虚拟的DOM树结构，并将其呈现到页面中；</em><br><em>2. 当数据改变，引起DOM树结构发生改变，从而生成一颗新的虚拟DOM树，将其与之前的DOM对比，将变化部分应用到真实的DOM树中，即页面中。</em><br><img src="./createElement.png" alt><br>通过Element我们可以任意地构建虚拟DOM树了。但是有个问题，虚拟的终归是虚拟的，我们得将其呈现到页面中。</p>
-<h4 id="DFS-深度遍历"><a href="#DFS-深度遍历" class="headerlink" title="DFS(深度遍历)"></a>DFS(深度遍历)</h4><p><img src="./%E6%B7%B1%E5%BA%A6%E9%81%8D%E5%8E%86.png" alt></p>
-<h4 id="BFS-广度遍历"><a href="#BFS-广度遍历" class="headerlink" title="BFS(广度遍历)"></a>BFS(广度遍历)</h4><p><img src="./%E5%B9%BF%E5%BA%A6%E9%81%8D%E5%8E%86.png" alt></p>
-<p><strong>因为我们得将子节点append到父节点中,选择DFS</strong><br><img src="./%E9%87%87%E7%94%A8DFS%E5%AE%9E%E7%8E%B0render.png" alt></p>
-<p>此时，我们就可以轻松地将虚拟DOM呈现到指定真实DOM中啦。假设，我们将上诉ul虚拟DOM呈现到页面body中，如下：</p>
-<p><img src="./%E5%88%9B%E5%BB%BADOM.png" alt></p>
-<h4 id="DOM更新"><a href="#DOM更新" class="headerlink" title="DOM更新"></a>DOM更新</h4><h4 id="DOM更新，无外乎四种情况，如下："><a href="#DOM更新，无外乎四种情况，如下：" class="headerlink" title="DOM更新，无外乎四种情况，如下："></a>DOM更新，无外乎四种情况，如下：</h4><ul>
-<li><ol>
-<li>新增节点;</li>
-</ol>
-</li>
-<li><ol start="2">
-<li>删除节点;</li>
-</ol>
-</li>
-<li><ol start="3">
-<li>替换节点;</li>
-</ol>
-</li>
-<li><ol start="4">
-<li>父节点相同，对比子节点.</li>
-</ol>
-</li>
-</ul>
-<h5 id="毫无疑问，遍历DOM树仍然采用DFS遍历。"><a href="#毫无疑问，遍历DOM树仍然采用DFS遍历。" class="headerlink" title="毫无疑问，遍历DOM树仍然采用DFS遍历。"></a>毫无疑问，遍历DOM树仍然采用DFS遍历。</h5><h5 id="因为我们要将变化的节点更新到真实DOM中，所以还得传入真实的DOM根节点，并且真实的DOM节点与虚拟的DOM节点，树形结构一致，故通过标记可以记录节点变化位置，如下："><a href="#因为我们要将变化的节点更新到真实DOM中，所以还得传入真实的DOM根节点，并且真实的DOM节点与虚拟的DOM节点，树形结构一致，故通过标记可以记录节点变化位置，如下：" class="headerlink" title="因为我们要将变化的节点更新到真实DOM中，所以还得传入真实的DOM根节点，并且真实的DOM节点与虚拟的DOM节点，树形结构一致，故通过标记可以记录节点变化位置，如下："></a>因为我们要将变化的节点更新到真实DOM中，所以还得传入真实的DOM根节点，并且真实的DOM节点与虚拟的DOM节点，树形结构一致，故通过标记可以记录节点变化位置，如下：</h5><p><img src="./dom%E6%9B%B4%E6%96%B0.png" alt></p>
-<h5 id="实现函数如下："><a href="#实现函数如下：" class="headerlink" title="实现函数如下："></a>实现函数如下：</h5><p><img src="./%E6%9B%B4%E6%96%B0dom%E5%87%BD%E6%95%B0.png" alt></p>
-<h5 id="其中的changed方法，简单实现如下："><a href="#其中的changed方法，简单实现如下：" class="headerlink" title="其中的changed方法，简单实现如下："></a>其中的changed方法，简单实现如下：</h5><p><img src="./%E6%94%B9%E5%8F%98DOm.png" alt></p>
+        <h3 id="如何让CORS携带Cookie"><a href="#如何让CORS携带Cookie" class="headerlink" title="如何让CORS携带Cookie"></a>如何让CORS携带Cookie</h3><p>CORS 是一个 W3C 标准，全称是“跨域资源共享”（Cross-origin resource sharing）。<br>默认浏览器为了安全，遵循“同源策略”，不允许 Ajax 跨域访问资源，而为了允许这种操作，服务器端和客户端都要遵循一些约定。<br><em>服务器端需设置以下响应头：</em></p>
+<blockquote>
+<p>Access-Control-Allow-Origin: <origin> | * // 授权的访问源<br>Access-Control-Max-Age: <delta-seconds> // 预检授权的有效期，单位：秒<br>Access-Control-Allow-Credentials: true | false // 是否允许携带<br>Cookie Access-Control-Allow-Methods: <method>[, <method>]* // 允许的请求动词<br>Access-Control-Allow-Headers: <field-name>[, <field-name>]* // 额外允许携带的请求头<br>Access-Control-Expose-Headers: <field-name>[, <field-name>]* // 额外允许访问的响应头</field-name></field-name></field-name></field-name></method></method></delta-seconds></origin></p>
+</blockquote>
+<p><em>此外在客户端浏览器中，我们仍然需要对 XMLHttpRequest 设置其 withCredentials 参数，才能实现携带 Cookie 的目标。示例代码如下：</em></p>
+<blockquote>
+<p>var xhr = new XMLHttpRequest();<br>xhr.withCredentials = true;</p>
+</blockquote>
+<p><strong>注意</strong>为了安全，标准里不允许 <strong>Access-Control-Allow-Origin: *,</strong>必须指定明确的、与请求网页一致的域名。同时，Cookie 依然遵循“同源策略”，只有用目标服务器域名设置的 Cookie 才会上传，而且使用 document.cookie 也无法读取目标服务器域名下的 Cookie。</p>
+<h3 id="如何让Jquery的AJAX使用CORS时携带Cookie"><a href="#如何让Jquery的AJAX使用CORS时携带Cookie" class="headerlink" title="如何让Jquery的AJAX使用CORS时携带Cookie"></a>如何让Jquery的AJAX使用CORS时携带Cookie</h3><p>跨域请求想要带上cookies必须在请求头里面加上xhrFields: {withCredentials: true}设置。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">$.ajax(&#123;</span><br><span class="line">    url: &quot;http://localhost:8080/orders&quot;,   </span><br><span class="line">    type: &quot;GET&quot;,</span><br><span class="line">    xhrFields: &#123;</span><br><span class="line">        withCredentials: true</span><br><span class="line">    &#125;,</span><br><span class="line">    success: function (data) &#123;</span><br><span class="line">        render(data);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<h3 id="VUE中axios携带cookie"><a href="#VUE中axios携带cookie" class="headerlink" title="VUE中axios携带cookie"></a>VUE中axios携带cookie</h3><blockquote>
+<p>axios.defaults.withCredentials=true;//让ajax携带cookie</p>
+</blockquote>
 
       
        <hr><span style="font-style: italic;color: gray;"> 欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以邮件至 1396961884@qq.com </span>
