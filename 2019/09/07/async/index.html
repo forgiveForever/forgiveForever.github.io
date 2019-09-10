@@ -1,0 +1,1022 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  <title>async | forgiveForever</title>
+  <meta name="keywords" content=" async ">
+  <meta name="description" content="async | forgiveForever">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="description" content="选择器类别CSS选择器大概可以分为五类：  元素选择器 关系选择器 属性选择器 伪类选择器 伪对象选择器  元素选择器   选择器 名称 描述    * 通配选择器 选择所有的元素   E 元素选择器 选择指定的元素   #idName id选择器 选择id属性等于idName的元素   .className class选择器 选择class属性包含className的元素   关系选择器   选">
+<meta name="keywords" content="CSS选择器">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CSS选择器">
+<meta property="og:url" content="http://forgiveForever.github.io/2019/09/10/CSS选择器/index.html">
+<meta property="og:site_name" content="forgiveForever">
+<meta property="og:description" content="选择器类别CSS选择器大概可以分为五类：  元素选择器 关系选择器 属性选择器 伪类选择器 伪对象选择器  元素选择器   选择器 名称 描述    * 通配选择器 选择所有的元素   E 元素选择器 选择指定的元素   #idName id选择器 选择id属性等于idName的元素   .className class选择器 选择class属性包含className的元素   关系选择器   选">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-09-10T06:54:51.908Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="CSS选择器">
+<meta name="twitter:description" content="选择器类别CSS选择器大概可以分为五类：  元素选择器 关系选择器 属性选择器 伪类选择器 伪对象选择器  元素选择器   选择器 名称 描述    * 通配选择器 选择所有的元素   E 元素选择器 选择指定的元素   #idName id选择器 选择id属性等于idName的元素   .className class选择器 选择class属性包含className的元素   关系选择器   选">
+
+
+<link rel="icon" href="/img/head.jpg">
+
+<link href="/css/style.css?v=1.0.1" rel="stylesheet">
+
+<link href="/css/hl_theme/atom-light.css?v=1.0.1" rel="stylesheet">
+
+<link href="//cdn.bootcss.com/animate.css/3.5.2/animate.min.css" rel="stylesheet">
+<link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+<script src="/js/jquery.autocomplete.min.js?v=1.0.1"></script>
+
+<script src="//cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script>
+    hljs.initHighlightingOnLoad();
+</script>
+
+<script src="//cdn.bootcss.com/nprogress/0.2.0/nprogress.min.js"></script>
+
+
+
+<script src="//cdn.bootcss.com/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+
+<script src="/js/iconfont.js?v=1.0.1"></script>
+
+</head>
+<div style="display: none">
+  <input class="theme_disqus_on" value="false">
+  <input class="theme_preload_comment" value="false">
+  <input class="theme_blog_path" value>
+</div>
+
+<body>
+<aside class="nav">
+    <div class="nav-left">
+        <a href="/" class="avatar_target">
+    <img class="avatar" src="/img/head.jpg" />
+</a>
+<div class="author">
+    <span>forgiveForever</span>
+</div>
+
+<div class="icon">
+    
+        
+        <a title="github" href="https://github.com/forgiveForever" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-github"></use>
+                </svg>
+            
+        </a>
+        
+    
+        
+        <a title="email" href="mailto:1396961884@qq.com" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-email"></use>
+                </svg>
+            
+        </a>
+        
+    
+        
+        <a title="qq" href="http://wpa.qq.com/msgrd?v=3&uin=1396961884&site=qq&menu=yes" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-qq"></use>
+                </svg>
+            
+        </a>
+        
+    
+</div>
+
+
+
+
+<ul>
+    <li><div class="all active">全部文章<small>(34)</small></div></li>
+    
+        
+            
+            <li><div data-rel="JS">JS<small>(7)</small></div>
+                
+            </li>
+            
+        
+    
+        
+            
+            <li><div data-rel="面试">面试<small>(4)</small></div>
+                
+            </li>
+            
+        
+    
+        
+            
+            <li><div data-rel="CSS">CSS<small>(5)</small></div>
+                
+            </li>
+            
+        
+    
+        
+            
+            <li><div data-rel="计算机网络">计算机网络<small>(6)</small></div>
+                
+            </li>
+            
+        
+    
+        
+            
+            <li><div data-rel="VUE">VUE<small>(3)</small></div>
+                
+            </li>
+            
+        
+    
+        
+            
+            <li><div data-rel="其他">其他<small>(5)</small></div>
+                
+            </li>
+            
+        
+    
+        
+            
+            <li><div data-rel="算法">算法<small>(3)</small></div>
+                
+            </li>
+            
+        
+    
+</ul>
+<div class="left-bottom">
+    <div class="menus">
+    
+    
+    
+    
+    </div>
+    <div><a class="about  hasFriend  site_url"  href="/about">关于</a><a style="width: 50%"  class="friends">友链</a></div>
+</div>
+<input type="hidden" id="yelog_site_posts_number" value="34">
+
+<div style="display: none">
+    <span id="busuanzi_value_site_uv"></span>
+    <span id="busuanzi_value_site_pv"></span>
+</div>
+
+    </div>
+    <div class="nav-right">
+        <div class="friends-area">
+    <div class="friends-title">
+        友情链接
+        <i class="back-title-list"></i>
+    </div>
+    <div class="friends-content">
+        <ul>
+            
+            <li><a target="_blank" href="https://github.com/forgiveForever">github</a></li>
+            
+        </ul>
+    </div>
+</div>
+        <div class="title-list">
+    <form onkeydown="if(event.keyCode==13){return false;}">
+        <input class="search" type="text" placeholder="以 in: 开头进行全文搜索" autocomplete="off"id="local-search-input" >
+        <i class="cross"></i>
+        <span>
+            <label for="tagswitch">Tags:</label>
+            <input id="tagswitch" type="checkbox" style="display: none" />
+            <i id="tagsWitchIcon"></i>
+        </span>
+    </form>
+    <div class="tags-list">
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">Ajax</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color2">Ajax跨域</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">BLGO</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color2">CSS选择器</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color2">Cookie</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">Session</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">HTTPS加密</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">HTTP</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color1">HTTPS</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">HTTP与HTTPS区别</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">VUE生命周期</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">Promise</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">异步</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">console.log输出</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color1">async</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">cookie跨域</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">diff</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">伪类</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">伪元素</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">判断五大主流浏览器</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">原生JS</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">hash</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">history</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">页面优化</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color2">网页加载过程</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">响应式布局方案</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color1">回流和重绘</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">布局</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">富途一面</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color1">数组扁平化</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">js</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">es6</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">数组遍历</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">斐波那契</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">浮动</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">盒模型</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">网络协议</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">前端</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">美团二面</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color1">虚拟DOM</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color2">页面阻塞问题</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color1">对象的拷贝</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">网络攻击</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color2">预防网络攻击</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color2">HTTP缓存</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">排序算法</a>
+    </li>
+    
+    <div class="clearfix"></div>
+</div>
+
+    
+    <div id="local-search-result">
+
+    </div>
+    
+    <nav id="title-list-nav">
+        
+        <a  class="JS "
+           href="/2019/08/26/Ajax/"
+           data-tag="Ajax,Ajax跨域"
+           data-author="" >
+            <span class="post-title" title="Ajax">Ajax</span>
+            <span class="post-date" title="2019-08-25 21:13:53">2019/08/25</span>
+        </a>
+        
+        <a  class="面试 "
+           href="/2019/08/29/BLGO/"
+           data-tag="BLGO"
+           data-author="" >
+            <span class="post-title" title="BLGO">BLGO</span>
+            <span class="post-date" title="2019-08-28 20:33:58">2019/08/28</span>
+        </a>
+        
+        <a  class="CSS "
+           href="/2019/09/10/CSS选择器/"
+           data-tag="CSS选择器"
+           data-author="" >
+            <span class="post-title" title="CSS选择器">CSS选择器</span>
+            <span class="post-date" title="2019-09-10 14:29:43">2019/09/10</span>
+        </a>
+        
+        <a  class="计算机网络 "
+           href="/2019/08/24/Cookie与Session/"
+           data-tag="Cookie,Session"
+           data-author="" >
+            <span class="post-title" title="Cookie与Session">Cookie与Session</span>
+            <span class="post-date" title="2019-08-23 18:43:17">2019/08/23</span>
+        </a>
+        
+        <a  class="计算机网络 "
+           href="/2019/09/03/HTTPS加密/"
+           data-tag="HTTPS加密"
+           data-author="" >
+            <span class="post-title" title="HTTPS加密">HTTPS加密</span>
+            <span class="post-date" title="2019-09-03 09:39:49">2019/09/03</span>
+        </a>
+        
+        <a  class="计算机网络 "
+           href="/2019/08/23/HTTP与HTTPS/"
+           data-tag="HTTP,HTTPS,HTTP与HTTPS区别"
+           data-author="" >
+            <span class="post-title" title="HTTP与HTTPS">HTTP与HTTPS</span>
+            <span class="post-date" title="2019-08-23 10:37:29">2019/08/23</span>
+        </a>
+        
+        <a  class="VUE "
+           href="/2019/09/04/VUE生命周期/"
+           data-tag="VUE生命周期"
+           data-author="" >
+            <span class="post-title" title="VUE生命周期">VUE生命周期</span>
+            <span class="post-date" title="2019-09-03 19:42:00">2019/09/03</span>
+        </a>
+        
+        <a  class="JS "
+           href="/2019/08/26/Promise/"
+           data-tag="Promise,异步"
+           data-author="" >
+            <span class="post-title" title="Promise">Promise</span>
+            <span class="post-date" title="2019-08-26 08:59:33">2019/08/26</span>
+        </a>
+        
+        <a  class="其他 "
+           href="/2019/09/03/console-log/"
+           data-tag="console.log输出"
+           data-author="" >
+            <span class="post-title" title="console.log">console.log</span>
+            <span class="post-date" title="2019-09-03 15:02:57">2019/09/03</span>
+        </a>
+        
+        <a  class="JS "
+           href="/2019/09/07/async/"
+           data-tag="async"
+           data-author="" >
+            <span class="post-title" title="async">async</span>
+            <span class="post-date" title="2019-09-07 15:35:06">2019/09/07</span>
+        </a>
+        
+        <a  class="JS "
+           href="/2019/09/01/cookie跨域/"
+           data-tag="cookie跨域"
+           data-author="" >
+            <span class="post-title" title="cookie跨域">cookie跨域</span>
+            <span class="post-date" title="2019-09-01 13:51:42">2019/09/01</span>
+        </a>
+        
+        <a  class="VUE "
+           href="/2019/08/31/diff/"
+           data-tag="diff"
+           data-author="" >
+            <span class="post-title" title="diff">diff</span>
+            <span class="post-date" title="2019-08-30 21:38:11">2019/08/30</span>
+        </a>
+        
+        <a  class="CSS "
+           href="/2019/09/10/伪类和伪元素总结/"
+           data-tag="伪类,伪元素"
+           data-author="" >
+            <span class="post-title" title="伪类和伪元素总结">伪类和伪元素总结</span>
+            <span class="post-date" title="2019-09-10 09:24:34">2019/09/10</span>
+        </a>
+        
+        <a  class="JS "
+           href="/2019/08/26/判断五大主流浏览器/"
+           data-tag="判断五大主流浏览器,原生JS"
+           data-author="" >
+            <span class="post-title" title="判断五大主流浏览器">判断五大主流浏览器</span>
+            <span class="post-date" title="2019-08-25 20:22:18">2019/08/25</span>
+        </a>
+        
+        <a  class="其他 "
+           href="/2019/08/31/前端路由的两种模式/"
+           data-tag="hash,history"
+           data-author="" >
+            <span class="post-title" title="前端路由的两种模式">前端路由的两种模式</span>
+            <span class="post-date" title="2019-08-31 14:43:51">2019/08/31</span>
+        </a>
+        
+        <a  class="其他 "
+           href="/2019/08/27/前端页面优化/"
+           data-tag="页面优化,网页加载过程"
+           data-author="" >
+            <span class="post-title" title="前端页面优化">前端页面优化</span>
+            <span class="post-date" title="2019-08-26 20:40:12">2019/08/26</span>
+        </a>
+        
+        <a  class="CSS "
+           href="/2019/09/05/响应式布局方案/"
+           data-tag="响应式布局方案"
+           data-author="" >
+            <span class="post-title" title="响应式布局方案">响应式布局方案</span>
+            <span class="post-date" title="2019-09-05 10:06:59">2019/09/05</span>
+        </a>
+        
+        <a  class="其他 "
+           href="/2019/08/27/回流和重绘/"
+           data-tag="回流和重绘"
+           data-author="" >
+            <span class="post-title" title="回流和重绘">回流和重绘</span>
+            <span class="post-date" title="2019-08-27 14:15:56">2019/08/27</span>
+        </a>
+        
+        <a  class=""
+           href="/2019/08/24/布局/"
+           data-tag="布局"
+           data-author="" >
+            <span class="post-title" title="布局">布局</span>
+            <span class="post-date" title="2019-08-24 09:29:57">2019/08/24</span>
+        </a>
+        
+        <a  class="面试 "
+           href="/2019/09/04/富途一面/"
+           data-tag="富途一面"
+           data-author="" >
+            <span class="post-title" title="富途一面">富途一面</span>
+            <span class="post-date" title="2019-09-04 14:28:13">2019/09/04</span>
+        </a>
+        
+        <a  class="算法 "
+           href="/2019/08/22/数组扁平化/"
+           data-tag="数组扁平化,js"
+           data-author="" >
+            <span class="post-title" title="数组扁平化">数组扁平化</span>
+            <span class="post-date" title="2019-08-22 15:46:24">2019/08/22</span>
+        </a>
+        
+        <a  class="JS "
+           href="/2019/08/27/数组遍历/"
+           data-tag="es6,数组遍历"
+           data-author="" >
+            <span class="post-title" title="数组遍历">数组遍历</span>
+            <span class="post-date" title="2019-08-26 20:08:08">2019/08/26</span>
+        </a>
+        
+        <a  class="算法 "
+           href="/2019/08/23/斐波那契/"
+           data-tag="js,斐波那契"
+           data-author="" >
+            <span class="post-title" title="斐波那契">斐波那契</span>
+            <span class="post-date" title="2019-08-22 16:58:49">2019/08/22</span>
+        </a>
+        
+        <a  class="CSS "
+           href="/2019/09/01/浮动/"
+           data-tag="浮动"
+           data-author="" >
+            <span class="post-title" title="浮动">浮动</span>
+            <span class="post-date" title="2019-09-01 08:57:23">2019/09/01</span>
+        </a>
+        
+        <a  class="CSS "
+           href="/2019/08/24/盒模型/"
+           data-tag="盒模型"
+           data-author="" >
+            <span class="post-title" title="盒模型">盒模型</span>
+            <span class="post-date" title="2019-08-23 19:37:16">2019/08/23</span>
+        </a>
+        
+        <a  class="计算机网络 "
+           href="/2019/08/23/网络协议/"
+           data-tag="网络协议"
+           data-author="" >
+            <span class="post-title" title="网络协议">网络协议</span>
+            <span class="post-date" title="2019-08-23 14:12:21">2019/08/23</span>
+        </a>
+        
+        <a  class="面试 "
+           href="/2019/08/22/美团一面/"
+           data-tag="前端"
+           data-author="" >
+            <span class="post-title" title="美团一面">美团一面</span>
+            <span class="post-date" title="2019-08-22 13:26:16">2019/08/22</span>
+        </a>
+        
+        <a  class="面试 "
+           href="/2019/09/03/美团二面/"
+           data-tag="美团二面"
+           data-author="" >
+            <span class="post-title" title="美团二面">美团二面</span>
+            <span class="post-date" title="2019-09-02 20:25:57">2019/09/02</span>
+        </a>
+        
+        <a  class="VUE "
+           href="/2019/08/31/虚拟DOM/"
+           data-tag="虚拟DOM"
+           data-author="" >
+            <span class="post-title" title="虚拟DOM">虚拟DOM</span>
+            <span class="post-date" title="2019-08-30 20:56:33">2019/08/30</span>
+        </a>
+        
+        <a  class="其他 "
+           href="/2019/09/04/页面阻塞问题/"
+           data-tag="页面阻塞问题"
+           data-author="" >
+            <span class="post-title" title="页面阻塞问题">页面阻塞问题</span>
+            <span class="post-date" title="2019-09-03 16:16:51">2019/09/03</span>
+        </a>
+        
+        <a  class="JS "
+           href="/2019/09/03/对象的拷贝/"
+           data-tag="对象的拷贝"
+           data-author="" >
+            <span class="post-title" title="对象的拷贝">对象的拷贝</span>
+            <span class="post-date" title="2019-09-02 19:42:43">2019/09/02</span>
+        </a>
+        
+        <a  class="计算机网络 "
+           href="/2019/08/31/网络攻击/"
+           data-tag="网络攻击,预防网络攻击"
+           data-author="" >
+            <span class="post-title" title="网络攻击">网络攻击</span>
+            <span class="post-date" title="2019-08-31 14:12:42">2019/08/31</span>
+        </a>
+        
+        <a  class="计算机网络 "
+           href="/2019/09/01/HTTP缓存/"
+           data-tag="HTTP缓存"
+           data-author="" >
+            <span class="post-title" title="HTTP缓存">HTTP缓存</span>
+            <span class="post-date" title="2019-09-01 15:55:04">2019/09/01</span>
+        </a>
+        
+        <a  class="算法 "
+           href="/2019/08/22/排序算法/"
+           data-tag="排序算法"
+           data-author="" >
+            <span class="post-title" title="排序算法">排序算法</span>
+            <span class="post-date" title="2019-08-22 14:17:58">2019/08/22</span>
+        </a>
+        
+    </nav>
+</div>
+    </div>
+    <div class="hide-list">
+        <div class="semicircle">
+            <div class="brackets first"><</div>
+            <div class="brackets">&gt;</div>
+        </div>
+    </div>
+</aside>
+<div class="post">
+    <div class="pjax">
+        <article id="js-async" class="article article-type-js" itemscope itemprop="blogPost">
+    
+        <h1 class="article-title">async</h1>
+    
+    <div class="article-meta">
+        
+        
+        
+        <span class="book">
+            
+                <a href="javascript:" data-rel="JS">JS</a>
+            
+        </span>
+        
+        
+        <span class="tag">
+            
+            <a href="javascript:" class="color1">async</a>
+            
+        </span>
+        
+    </div>
+    <div class="article-meta">
+        
+        创建时间:<time class="date" title='更新时间: 2019-09-07 08:00:03'>2019-09-07 15:35</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        
+        
+    </div>
+    
+    <div class="toc-ref">
+    
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#关于异步"><span class="toc-text">关于异步</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#async-函数是什么？"><span class="toc-text">async 函数是什么？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#async-函数的优点"><span class="toc-text">async 函数的优点</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#内置执行器。Generator-函数的执行必须靠执行器，所以才有了-co-函数库，而-async-函数自带执行器。也就是说，async-函数的执行，与普通函数一模一样，只要一行。"><span class="toc-text">内置执行器。Generator 函数的执行必须靠执行器，所以才有了 co 函数库，而 async 函数自带执行器。也就是说，async 函数的执行，与普通函数一模一样，只要一行。</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#更好的语义。async-和-await，比起星号和-yield，语义更清楚了。async-表示函数里有异步操作，await-表示紧跟在后面的表达式需要等待结果。"><span class="toc-text">更好的语义。async 和 await，比起星号和 yield，语义更清楚了。async 表示函数里有异步操作，await 表示紧跟在后面的表达式需要等待结果。</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#更广的适用性。-co-函数库约定，yield-命令后面只能是-Thunk-函数或-Promise-对象，而-async-函数的-await-命令后面，可以跟-Promise-对象和原始类型的值（数值、字符串和布尔值，但这时等同于同步操作）。"><span class="toc-text">更广的适用性。 co 函数库约定，yield 命令后面只能是 Thunk 函数或 Promise 对象，而 async 函数的 await 命令后面，可以跟 Promise 对象和原始类型的值（数值、字符串和布尔值，但这时等同于同步操作）。</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#async-函数的实现"><span class="toc-text">async 函数的实现</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#async-函数的用法"><span class="toc-text">async 函数的用法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#注意点"><span class="toc-text">注意点</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-await-命令后面的-Promise-对象，运行结果可能是-rejected，所以最好把-await-命令放在-try…catch-代码块中。"><span class="toc-text">1.await 命令后面的 Promise 对象，运行结果可能是 rejected，所以最好把 await 命令放在 try…catch 代码块中。</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-await-命令只能用在-async-函数之中，如果用在普通函数，就会报错。"><span class="toc-text">2.await 命令只能用在 async 函数之中，如果用在普通函数，就会报错。</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#上面代码会报错，因为-await-用在普通函数之中了。但是，如果将-forEach-方法的参数改成-async-函数，也有问题。"><span class="toc-text">上面代码会报错，因为 await 用在普通函数之中了。但是，如果将 forEach 方法的参数改成 async 函数，也有问题。</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#上面代码可能不会正常工作，原因是这时三个-db-post-操作将是并发执行，也就是同时执行，而不是继发执行。正确的写法是采用-for-循环。"><span class="toc-text">上面代码可能不会正常工作，原因是这时三个 db.post 操作将是并发执行，也就是同时执行，而不是继发执行。正确的写法是采用 for 循环。</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-如果确实希望多个请求并发执行，可以使用-Promise-all-方法。"><span class="toc-text">3.如果确实希望多个请求并发执行，可以使用 Promise.all 方法。</span></a></li></ol></li></ol>
+    
+<style>
+    .left-col .switch-btn,
+    .left-col .switch-area {
+        display: none;
+    }
+    .toc-level-3 i,
+    .toc-level-3 ol {
+        display: none !important;
+    }
+</style>
+</div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="关于异步"><a href="#关于异步" class="headerlink" title="关于异步"></a>关于异步</h3><p>异步操作是 JavaScript 编程的麻烦事，麻烦到一直有人提出各种各样的方案，试图解决这个问题。<br>从最早的回调函数，到 Promise 对象，再到 Generator 函数，每次都有所改进，但又让人觉得不彻底。它们都有额外的复杂性，都需要理解抽象的底层运行机制。<br>异步I/O不就是读取一个文件吗，干嘛要搞得这么复杂？异步编程的最高境界，就是根本不用关心它是不是异步。<br>async 函数就是隧道尽头的亮光，很多人认为它是异步操作的终极解决方案。</p>
+<h3 id="async-函数是什么？"><a href="#async-函数是什么？" class="headerlink" title="async 函数是什么？"></a>async 函数是什么？</h3><p>一句话，async 函数就是 Generator 函数的语法糖。<br>前文有一个 Generator 函数，依次读取两个文件。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">var fs = require(&apos;fs&apos;);</span><br><span class="line">var readFile = function (fileName)&#123;</span><br><span class="line">  return new Promise(function (resolve, reject)&#123; </span><br><span class="line">    fs.readFile(fileName, function(error, data)&#123;</span><br><span class="line">      if (error) reject(error);</span><br><span class="line">      resolve(data);</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">var gen = function* ()&#123;</span><br><span class="line">  var f1 = yield readFile(&apos;/etc/fstab&apos;);</span><br><span class="line">  var f2 = yield readFile(&apos;/etc/shells&apos;);</span><br><span class="line">  console.log(f1.toString());</span><br><span class="line">  console.log(f2.toString());</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>写成 async 函数，就是下面这样。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">var asyncReadFile = async function ()&#123;</span><br><span class="line">  var f1 = await readFile(&apos;/etc/fstab&apos;);</span><br><span class="line">  var f2 = await readFile(&apos;/etc/shells&apos;);</span><br><span class="line">  console.log(f1.toString());</span><br><span class="line">  console.log(f2.toString());</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p><strong>注意：</strong> 一比较就会发现，async 函数就是将 Generator 函数的星号（*）替换成 async，将 yield 替换成 await，仅此而已。</p>
+<h3 id="async-函数的优点"><a href="#async-函数的优点" class="headerlink" title="async 函数的优点"></a>async 函数的优点</h3><p>async 函数对 Generator 函数的改进，体现在以下三点。</p>
+<ul>
+<li><h4 id="内置执行器。Generator-函数的执行必须靠执行器，所以才有了-co-函数库，而-async-函数自带执行器。也就是说，async-函数的执行，与普通函数一模一样，只要一行。"><a href="#内置执行器。Generator-函数的执行必须靠执行器，所以才有了-co-函数库，而-async-函数自带执行器。也就是说，async-函数的执行，与普通函数一模一样，只要一行。" class="headerlink" title="内置执行器。Generator 函数的执行必须靠执行器，所以才有了 co 函数库，而 async 函数自带执行器。也就是说，async 函数的执行，与普通函数一模一样，只要一行。"></a><strong>内置执行器。</strong>Generator 函数的执行必须靠执行器，所以才有了 co 函数库，而 async 函数自带执行器。也就是说，async 函数的执行，与普通函数一模一样，只要一行。</h4></li>
+<li><h4 id="更好的语义。async-和-await，比起星号和-yield，语义更清楚了。async-表示函数里有异步操作，await-表示紧跟在后面的表达式需要等待结果。"><a href="#更好的语义。async-和-await，比起星号和-yield，语义更清楚了。async-表示函数里有异步操作，await-表示紧跟在后面的表达式需要等待结果。" class="headerlink" title="更好的语义。async 和 await，比起星号和 yield，语义更清楚了。async 表示函数里有异步操作，await 表示紧跟在后面的表达式需要等待结果。"></a><strong>更好的语义。</strong>async 和 await，比起星号和 yield，语义更清楚了。async 表示函数里有异步操作，await 表示紧跟在后面的表达式需要等待结果。</h4></li>
+<li><h4 id="更广的适用性。-co-函数库约定，yield-命令后面只能是-Thunk-函数或-Promise-对象，而-async-函数的-await-命令后面，可以跟-Promise-对象和原始类型的值（数值、字符串和布尔值，但这时等同于同步操作）。"><a href="#更广的适用性。-co-函数库约定，yield-命令后面只能是-Thunk-函数或-Promise-对象，而-async-函数的-await-命令后面，可以跟-Promise-对象和原始类型的值（数值、字符串和布尔值，但这时等同于同步操作）。" class="headerlink" title="更广的适用性。 co 函数库约定，yield 命令后面只能是 Thunk 函数或 Promise 对象，而 async 函数的 await 命令后面，可以跟 Promise 对象和原始类型的值（数值、字符串和布尔值，但这时等同于同步操作）。"></a><strong>更广的适用性。</strong> co 函数库约定，yield 命令后面只能是 Thunk 函数或 Promise 对象，而 async 函数的 await 命令后面，可以跟 Promise 对象和原始类型的值（数值、字符串和布尔值，但这时等同于同步操作）。</h4></li>
+</ul>
+<h3 id="async-函数的实现"><a href="#async-函数的实现" class="headerlink" title="async 函数的实现"></a>async 函数的实现</h3><p>async 函数的实现，就是将 Generator 函数和自动执行器，包装在一个函数里。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">async function fn(args)&#123;</span><br><span class="line">  // ...</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// 等同于</span><br><span class="line"></span><br><span class="line">function fn(args)&#123; </span><br><span class="line">  return spawn(function*() &#123;</span><br><span class="line">    // ...</span><br><span class="line">  &#125;); </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>所有的 async 函数都可以写成上面的第二种形式，其中的 spawn 函数就是自动执行器。<br>下面给出 spawn 函数的实现，基本就是前文自动执行器的翻版。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">function spawn(genF) &#123;</span><br><span class="line">  return new Promise(function(resolve, reject) &#123;</span><br><span class="line">    var gen = genF();</span><br><span class="line">    function step(nextF) &#123;</span><br><span class="line">      try &#123;</span><br><span class="line">        var next = nextF();</span><br><span class="line">      &#125; catch(e) &#123;</span><br><span class="line">        return reject(e); </span><br><span class="line">      &#125;</span><br><span class="line">      if(next.done) &#123;</span><br><span class="line">        return resolve(next.value);</span><br><span class="line">      &#125; </span><br><span class="line">      Promise.resolve(next.value).then(function(v) &#123;</span><br><span class="line">        step(function() &#123; return gen.next(v); &#125;);      </span><br><span class="line">      &#125;, function(e) &#123;</span><br><span class="line">        step(function() &#123; return gen.throw(e); &#125;);</span><br><span class="line">      &#125;);</span><br><span class="line">    &#125;</span><br><span class="line">    step(function() &#123; return gen.next(undefined); &#125;);</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><em>async 函数是非常新的语法功能，新到都不属于 ES6，而是属于 ES7。目前，它仍处于提案阶段，但是转码器 Babel 和 regenerator 都已经支持，转码后就能使用。</em></p>
+<h3 id="async-函数的用法"><a href="#async-函数的用法" class="headerlink" title="async 函数的用法"></a>async 函数的用法</h3><p>同 Generator 函数一样，async 函数返回一个 Promise 对象，可以使用 then 方法添加回调函数。当函数执行的时候，一旦遇到 await 就会先返回，等到触发的异步操作完成，再接着执行函数体内后面的语句。<br>下面是一个例子。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">async function getStockPriceByName(name) &#123;</span><br><span class="line">  var symbol = await getStockSymbol(name);</span><br><span class="line">  var stockPrice = await getStockPrice(symbol);</span><br><span class="line">  return stockPrice;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">getStockPriceByName(&apos;goog&apos;).then(function (result)&#123;</span><br><span class="line">  console.log(result);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>上面代码是一个获取股票报价的函数，函数前面的async关键字，表明该函数内部有异步操作。调用该函数时，会立即返回一个Promise对象。</p>
+<hr>
+<p>下面的例子，指定多少毫秒后输出一个值。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">function timeout(ms) &#123;</span><br><span class="line">  return new Promise((resolve) =&gt; &#123;</span><br><span class="line">    setTimeout(resolve, ms);</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">async function asyncPrint(value, ms) &#123;</span><br><span class="line">  await timeout(ms);</span><br><span class="line">  console.log(value)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">asyncPrint(&apos;hello world&apos;, 50);</span><br></pre></td></tr></table></figure>
+
+<p>上面代码指定50毫秒以后，输出”hello world”。</p>
+<h3 id="注意点"><a href="#注意点" class="headerlink" title="注意点"></a>注意点</h3><h4 id="1-await-命令后面的-Promise-对象，运行结果可能是-rejected，所以最好把-await-命令放在-try…catch-代码块中。"><a href="#1-await-命令后面的-Promise-对象，运行结果可能是-rejected，所以最好把-await-命令放在-try…catch-代码块中。" class="headerlink" title="1.await 命令后面的 Promise 对象，运行结果可能是 rejected，所以最好把 await 命令放在 try…catch 代码块中。"></a>1.await 命令后面的 Promise 对象，运行结果可能是 rejected，所以最好把 await 命令放在 try…catch 代码块中。</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">async function myFunction() &#123;</span><br><span class="line">  try &#123;</span><br><span class="line">    await somethingThatReturnsAPromise();</span><br><span class="line">  &#125; catch (err) &#123;</span><br><span class="line">    console.log(err);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// 另一种写法</span><br><span class="line"></span><br><span class="line">async function myFunction() &#123;</span><br><span class="line">  await somethingThatReturnsAPromise().catch(function (err)&#123;</span><br><span class="line">    console.log(err);</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="2-await-命令只能用在-async-函数之中，如果用在普通函数，就会报错。"><a href="#2-await-命令只能用在-async-函数之中，如果用在普通函数，就会报错。" class="headerlink" title="2.await 命令只能用在 async 函数之中，如果用在普通函数，就会报错。"></a>2.await 命令只能用在 async 函数之中，如果用在普通函数，就会报错。</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">async function dbFuc(db) &#123;</span><br><span class="line">  let docs = [&#123;&#125;, &#123;&#125;, &#123;&#125;];</span><br><span class="line"></span><br><span class="line">  // 报错</span><br><span class="line">  docs.forEach(function (doc) &#123;</span><br><span class="line">    await db.post(doc);</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="上面代码会报错，因为-await-用在普通函数之中了。但是，如果将-forEach-方法的参数改成-async-函数，也有问题。"><a href="#上面代码会报错，因为-await-用在普通函数之中了。但是，如果将-forEach-方法的参数改成-async-函数，也有问题。" class="headerlink" title="上面代码会报错，因为 await 用在普通函数之中了。但是，如果将 forEach 方法的参数改成 async 函数，也有问题。"></a>上面代码会报错，因为 await 用在普通函数之中了。但是，如果将 forEach 方法的参数改成 async 函数，也有问题。</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">async function dbFuc(db) &#123;</span><br><span class="line">  let docs = [&#123;&#125;, &#123;&#125;, &#123;&#125;];</span><br><span class="line"></span><br><span class="line">  // 可能得到错误结果</span><br><span class="line">  docs.forEach(async function (doc) &#123;</span><br><span class="line">    await db.post(doc);</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="上面代码可能不会正常工作，原因是这时三个-db-post-操作将是并发执行，也就是同时执行，而不是继发执行。正确的写法是采用-for-循环。"><a href="#上面代码可能不会正常工作，原因是这时三个-db-post-操作将是并发执行，也就是同时执行，而不是继发执行。正确的写法是采用-for-循环。" class="headerlink" title="上面代码可能不会正常工作，原因是这时三个 db.post 操作将是并发执行，也就是同时执行，而不是继发执行。正确的写法是采用 for 循环。"></a>上面代码可能不会正常工作，原因是这时三个 db.post 操作将是并发执行，也就是同时执行，而不是继发执行。正确的写法是采用 for 循环。</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">async function dbFuc(db) &#123;</span><br><span class="line">  let docs = [&#123;&#125;, &#123;&#125;, &#123;&#125;];</span><br><span class="line"></span><br><span class="line">  for (let doc of docs) &#123;</span><br><span class="line">    await db.post(doc);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="3-如果确实希望多个请求并发执行，可以使用-Promise-all-方法。"><a href="#3-如果确实希望多个请求并发执行，可以使用-Promise-all-方法。" class="headerlink" title="3.如果确实希望多个请求并发执行，可以使用 Promise.all 方法。"></a>3.如果确实希望多个请求并发执行，可以使用 Promise.all 方法。</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">async function dbFuc(db) &#123;</span><br><span class="line">  let docs = [&#123;&#125;, &#123;&#125;, &#123;&#125;];</span><br><span class="line">  let promises = docs.map((doc) =&gt; db.post(doc));</span><br><span class="line"></span><br><span class="line">  let results = await Promise.all(promises);</span><br><span class="line">  console.log(results);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// 或者使用下面的写法</span><br><span class="line"></span><br><span class="line">async function dbFuc(db) &#123;</span><br><span class="line">  let docs = [&#123;&#125;, &#123;&#125;, &#123;&#125;];</span><br><span class="line">  let promises = docs.map((doc) =&gt; db.post(doc));</span><br><span class="line"></span><br><span class="line">  let results = [];</span><br><span class="line">  for (let promise of promises) &#123;</span><br><span class="line">    results.push(await promise);</span><br><span class="line">  &#125;</span><br><span class="line">  console.log(results);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+      
+       <hr><span style="font-style: italic;color: gray;"> 欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以邮件至 1396961884@qq.com </span>
+    </div>
+</article>
+
+
+
+
+
+
+
+    
+
+
+
+
+    </div>
+    <div class="copyright">
+        <p class="footer-entry">©2016-2020 forgiveForever</p>
+<p class="footer-entry">Built with <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/yelog/hexo-theme-3-hexo" target="_blank">3-hexo</a> theme</p>
+
+    </div>
+    <div class="full-toc">
+        <button class="full"><span class="min "></span></button>
+<button class="post-toc-menu"><span class="post-toc-menu-icons"></span></button>
+<div class="post-toc"><span class="post-toc-title">目录</span>
+    <div class="post-toc-content">
+
+    </div>
+</div>
+<a class="" id="rocket" href="javascript:void(0)"></a>
+    </div>
+</div>
+<div class="acParent"></div>
+
+</body>
+<script src="//cdn.bootcss.com/jquery.pjax/2.0.1/jquery.pjax.min.js"></script>
+
+<script src="/js/script.js?v=1.0.1" ></script>
+<script>
+    var img_resize = 'default';
+    /*作者、标签的自动补全*/
+    $(function () {
+        $('.search').AutoComplete({
+            'data': ['#Ajax','#Ajax跨域','#BLGO','#CSS选择器','#Cookie','#Session','#HTTPS加密','#HTTP','#HTTPS','#HTTP与HTTPS区别','#VUE生命周期','#Promise','#异步','#console.log输出','#async','#cookie跨域','#diff','#伪类','#伪元素','#判断五大主流浏览器','#原生JS','#hash','#history','#页面优化','#网页加载过程','#响应式布局方案','#回流和重绘','#布局','#富途一面','#数组扁平化','#js','#es6','#数组遍历','#斐波那契','#浮动','#盒模型','#网络协议','#前端','#美团二面','#虚拟DOM','#页面阻塞问题','#对象的拷贝','#网络攻击','#预防网络攻击','#HTTP缓存','#排序算法',],
+            'itemHeight': 20,
+            'width': 418
+        }).AutoComplete('show');
+    })
+    function initArticle() {
+        /*渲染对应的表格样式*/
+        
+            $(".post .pjax table").addClass("green_title");
+        
+
+        /*渲染打赏样式*/
+        
+
+        /*高亮代码块行号*/
+        
+        $('pre code').each(function(){
+            var lines = $(this).text().split('\n').length - 1, widther='';
+            if (lines>99) {
+                widther = 'widther'
+            }
+            var $numbering = $('<ul/>').addClass('pre-numbering ' + widther).attr("unselectable","on");
+            $(this).addClass('has-numbering ' + widther)
+                    .parent()
+                    .append($numbering);
+            for(var i=1;i<=lines;i++){
+                $numbering.append($('<li/>').text(i));
+            }
+        });
+        
+
+        /*访问数量*/
+        
+
+        /*代码高亮，行号对齐*/
+        $('.pre-numbering').css('line-height',$('.has-numbering').css('line-height'));
+
+        
+    }
+
+    /*打赏页面隐藏与展示*/
+    
+
+</script>
+
+<!--加入行号的高亮代码块样式-->
+
+<style>
+    pre{
+        position: relative;
+        margin-bottom: 24px;
+        border-radius: 10px;
+        border: 1px solid #e2dede;
+        background: #FFF;
+        overflow: hidden;
+    }
+    code.has-numbering{
+        margin-left: 30px;
+    }
+    code.has-numbering.widther{
+        margin-left: 35px;
+    }
+    .pre-numbering{
+        margin: 0px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 20px;
+        padding: 0.5em 3px 0.7em 5px;
+        border-right: 1px solid #C3CCD0;
+        text-align: right;
+        color: #AAA;
+        background-color: #fafafa;
+    }
+    .pre-numbering.widther {
+        width: 35px;
+    }
+</style>
+
+<!--自定义样式设置-->
+<style>
+    
+    
+    .nav {
+        width: 542px;
+    }
+    .nav.fullscreen {
+        margin-left: -542px;
+    }
+    .nav-left {
+        width: 120px;
+    }
+    
+    
+    @media screen and (max-width: 1468px) {
+        .nav {
+            width: 492px;
+        }
+        .nav.fullscreen {
+            margin-left: -492px;
+        }
+        .nav-left {
+            width: 100px;
+        }
+    }
+    
+    
+    @media screen and (max-width: 1024px) {
+        .nav {
+            width: 492px;
+            margin-left: -492px
+        }
+        .nav.fullscreen {
+            margin-left: 0;
+        }
+        .nav .hide-list.fullscreen {
+            left: 492px
+        }
+    }
+    
+    @media screen and (max-width: 426px) {
+        .nav {
+            width: 100%;
+        }
+        .nav-left {
+            width: 100%;
+        }
+    }
+    
+    
+    .nav-right .title-list nav a .post-title, .nav-right .title-list #local-search-result a .post-title {
+        color: #383636;
+    }
+    
+    
+    .nav-right .title-list nav a .post-date, .nav-right .title-list #local-search-result a .post-date {
+        color: #5e5e5f;
+    }
+    
+    
+    .nav-right nav a.hover, #local-search-result a.hover{
+        background-color: #e2e0e0;
+    }
+    
+    
+
+    /*列表样式*/
+    
+    .post .pjax article .article-entry>ol, .post .pjax article .article-entry>ul, .post .pjax article>ol, .post .pjax article>ul{
+        border: #e2dede solid 1px;
+        border-radius: 10px;
+        padding: 10px 32px 10px 56px;
+    }
+    .post .pjax article .article-entry li>ol, .post .pjax article .article-entry li>ul,.post .pjax article li>ol, .post .pjax article li>ul{
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+    .post .pjax article .article-entry>ol>li, .post .pjax article .article-entry>ul>li,.post .pjax article>ol>li, .post .pjax article>ul>li{
+        margin-bottom: auto;
+        margin-left: auto;
+    }
+    .post .pjax article .article-entry li>ol>li, .post .pjax article .article-entry li>ul>li,.post .pjax article li>ol>li, .post .pjax article li>ul>li{
+        margin-bottom: auto;
+        margin-left: auto;
+    }
+    
+
+    /* 背景图样式 */
+    
+    
+
+
+    /*引用块样式*/
+    
+
+    /*文章列表背景图*/
+    
+    .nav-right:before {
+        content: ' ';
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0.3;
+        background: url("https://i.loli.net/2019/07/22/5d3521411f3f169375.png");
+        background-repeat: no-repeat;
+        background-position: 50% 0;
+        -ms-background-size: cover;
+        -o-background-size: cover;
+        -moz-background-size: cover;
+        -webkit-background-size: cover;
+        background-size: cover;
+    }
+    
+
+    
+</style>
+
+
+
+
+
+
+
+</html>
