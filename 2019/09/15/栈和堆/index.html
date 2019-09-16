@@ -1,0 +1,1039 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  <title>栈和堆 | forgiveForever</title>
+  <meta name="keywords" content=" 栈 , 堆 ">
+  <meta name="description" content="栈和堆 | forgiveForever">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="description" content="forgiveForeverforgiveForever LQ的个人博客。 目的 为了梳理知识，便于复习、巩固学过的知识、拓宽知识面">
+<meta property="og:type" content="website">
+<meta property="og:title" content="about">
+<meta property="og:url" content="http://forgiveForever.github.io/about/index.html">
+<meta property="og:site_name" content="forgiveForever">
+<meta property="og:description" content="forgiveForeverforgiveForever LQ的个人博客。 目的 为了梳理知识，便于复习、巩固学过的知识、拓宽知识面">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-08-22T02:19:59.249Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="about">
+<meta name="twitter:description" content="forgiveForeverforgiveForever LQ的个人博客。 目的 为了梳理知识，便于复习、巩固学过的知识、拓宽知识面">
+
+
+<link rel="icon" href="/img/head.jpg">
+
+<link href="/css/style.css?v=1.0.1" rel="stylesheet">
+
+<link href="/css/hl_theme/atom-light.css?v=1.0.1" rel="stylesheet">
+
+<link href="//cdn.bootcss.com/animate.css/3.5.2/animate.min.css" rel="stylesheet">
+<link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+<script src="/js/jquery.autocomplete.min.js?v=1.0.1"></script>
+
+<script src="//cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script>
+    hljs.initHighlightingOnLoad();
+</script>
+
+<script src="//cdn.bootcss.com/nprogress/0.2.0/nprogress.min.js"></script>
+
+
+
+<script src="//cdn.bootcss.com/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+
+<script src="/js/iconfont.js?v=1.0.1"></script>
+
+</head>
+<div style="display: none">
+  <input class="theme_disqus_on" value="false">
+  <input class="theme_preload_comment" value="false">
+  <input class="theme_blog_path" value>
+</div>
+
+<body>
+<aside class="nav">
+    <div class="nav-left">
+        <a href="/" class="avatar_target">
+    <img class="avatar" src="/img/head.jpg" />
+</a>
+<div class="author">
+    <span>forgiveForever</span>
+</div>
+
+<div class="icon">
+    
+        
+        <a title="github" href="https://github.com/forgiveForever" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-github"></use>
+                </svg>
+            
+        </a>
+        
+    
+        
+        <a title="email" href="mailto:1396961884@qq.com" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-email"></use>
+                </svg>
+            
+        </a>
+        
+    
+        
+        <a title="qq" href="http://wpa.qq.com/msgrd?v=3&uin=1396961884&site=qq&menu=yes" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-qq"></use>
+                </svg>
+            
+        </a>
+        
+    
+</div>
+
+
+
+
+<ul>
+    <li><div class="all active">全部文章<small>(37)</small></div></li>
+    
+        
+            
+            <li><div data-rel="面试">面试<small>(4)</small></div>
+                
+            </li>
+            
+        
+    
+        
+            
+            <li><div data-rel="JS">JS<small>(8)</small></div>
+                
+            </li>
+            
+        
+    
+        
+            
+            <li><div data-rel="CSS">CSS<small>(5)</small></div>
+                
+            </li>
+            
+        
+    
+        
+            
+            <li><div data-rel="计算机网络">计算机网络<small>(6)</small></div>
+                
+            </li>
+            
+        
+    
+        
+            
+            <li><div data-rel="VUE">VUE<small>(5)</small></div>
+                
+            </li>
+            
+        
+    
+        
+            
+            <li><div data-rel="其他">其他<small>(5)</small></div>
+                
+            </li>
+            
+        
+    
+        
+            
+            <li><div data-rel="算法">算法<small>(3)</small></div>
+                
+            </li>
+            
+        
+    
+</ul>
+<div class="left-bottom">
+    <div class="menus">
+    
+    
+    
+    
+    </div>
+    <div><a class="about  hasFriend  site_url"  href="/about">关于</a><a style="width: 50%"  class="friends">友链</a></div>
+</div>
+<input type="hidden" id="yelog_site_posts_number" value="37">
+
+<div style="display: none">
+    <span id="busuanzi_value_site_uv"></span>
+    <span id="busuanzi_value_site_pv"></span>
+</div>
+
+    </div>
+    <div class="nav-right">
+        <div class="friends-area">
+    <div class="friends-title">
+        友情链接
+        <i class="back-title-list"></i>
+    </div>
+    <div class="friends-content">
+        <ul>
+            
+            <li><a target="_blank" href="https://github.com/forgiveForever">github</a></li>
+            
+        </ul>
+    </div>
+</div>
+        <div class="title-list">
+    <form onkeydown="if(event.keyCode==13){return false;}">
+        <input class="search" type="text" placeholder="以 in: 开头进行全文搜索" autocomplete="off"id="local-search-input" >
+        <i class="cross"></i>
+        <span>
+            <label for="tagswitch">Tags:</label>
+            <input id="tagswitch" type="checkbox" style="display: none" />
+            <i id="tagsWitchIcon"></i>
+        </span>
+    </form>
+    <div class="tags-list">
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">BLGO</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">Ajax</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color2">Ajax跨域</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color2">CSS选择器</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">HTTPS加密</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color2">Cookie</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">Session</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">HTTP</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color1">HTTPS</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">HTTP与HTTPS区别</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">Promise</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">异步</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">VUE生命周期</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color1">async</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">console.log输出</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">cookie跨域</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">diff</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">v-model原理</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">伪类</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">伪元素</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">判断五大主流浏览器</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">原生JS</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">页面优化</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color2">网页加载过程</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">双向绑定</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">发布者-订阅者模式</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">hash</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">history</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">响应式布局方案</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color1">回流和重绘</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">富途一面</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color1">对象的拷贝</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">布局</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color1">数组扁平化</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">js</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">es6</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">数组遍历</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">斐波那契</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color2">栈</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color2">堆</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">浮动</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">网络协议</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">盒模型</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">网络攻击</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color2">预防网络攻击</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">前端</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">美团二面</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color1">虚拟DOM</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color2">页面阻塞问题</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color2">HTTP缓存</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">排序算法</a>
+    </li>
+    
+    <div class="clearfix"></div>
+</div>
+
+    
+    <div id="local-search-result">
+
+    </div>
+    
+    <nav id="title-list-nav">
+        
+        <a  class="面试 "
+           href="/2019/08/29/BLGO/"
+           data-tag="BLGO"
+           data-author="" >
+            <span class="post-title" title="BLGO">BLGO</span>
+            <span class="post-date" title="2019-08-28 20:33:58">2019/08/28</span>
+        </a>
+        
+        <a  class="JS "
+           href="/2019/08/26/Ajax/"
+           data-tag="Ajax,Ajax跨域"
+           data-author="" >
+            <span class="post-title" title="Ajax">Ajax</span>
+            <span class="post-date" title="2019-08-25 21:13:53">2019/08/25</span>
+        </a>
+        
+        <a  class="CSS "
+           href="/2019/09/10/CSS选择器/"
+           data-tag="CSS选择器"
+           data-author="" >
+            <span class="post-title" title="CSS选择器">CSS选择器</span>
+            <span class="post-date" title="2019-09-10 14:29:43">2019/09/10</span>
+        </a>
+        
+        <a  class="计算机网络 "
+           href="/2019/09/03/HTTPS加密/"
+           data-tag="HTTPS加密"
+           data-author="" >
+            <span class="post-title" title="HTTPS加密">HTTPS加密</span>
+            <span class="post-date" title="2019-09-03 09:39:49">2019/09/03</span>
+        </a>
+        
+        <a  class="计算机网络 "
+           href="/2019/08/24/Cookie与Session/"
+           data-tag="Cookie,Session"
+           data-author="" >
+            <span class="post-title" title="Cookie与Session">Cookie与Session</span>
+            <span class="post-date" title="2019-08-23 18:43:17">2019/08/23</span>
+        </a>
+        
+        <a  class="计算机网络 "
+           href="/2019/08/23/HTTP与HTTPS/"
+           data-tag="HTTP,HTTPS,HTTP与HTTPS区别"
+           data-author="" >
+            <span class="post-title" title="HTTP与HTTPS">HTTP与HTTPS</span>
+            <span class="post-date" title="2019-08-23 10:37:29">2019/08/23</span>
+        </a>
+        
+        <a  class="JS "
+           href="/2019/08/26/Promise/"
+           data-tag="Promise,异步"
+           data-author="" >
+            <span class="post-title" title="Promise">Promise</span>
+            <span class="post-date" title="2019-08-26 08:59:33">2019/08/26</span>
+        </a>
+        
+        <a  class="VUE "
+           href="/2019/09/04/VUE生命周期/"
+           data-tag="VUE生命周期"
+           data-author="" >
+            <span class="post-title" title="VUE生命周期">VUE生命周期</span>
+            <span class="post-date" title="2019-09-03 19:42:00">2019/09/03</span>
+        </a>
+        
+        <a  class="JS "
+           href="/2019/09/07/async/"
+           data-tag="async"
+           data-author="" >
+            <span class="post-title" title="async">async</span>
+            <span class="post-date" title="2019-09-07 15:35:06">2019/09/07</span>
+        </a>
+        
+        <a  class="其他 "
+           href="/2019/09/03/console-log/"
+           data-tag="console.log输出"
+           data-author="" >
+            <span class="post-title" title="console.log">console.log</span>
+            <span class="post-date" title="2019-09-03 15:02:57">2019/09/03</span>
+        </a>
+        
+        <a  class="JS "
+           href="/2019/09/01/cookie跨域/"
+           data-tag="cookie跨域"
+           data-author="" >
+            <span class="post-title" title="cookie跨域">cookie跨域</span>
+            <span class="post-date" title="2019-09-01 13:51:42">2019/09/01</span>
+        </a>
+        
+        <a  class="VUE "
+           href="/2019/08/31/diff/"
+           data-tag="diff"
+           data-author="" >
+            <span class="post-title" title="diff">diff</span>
+            <span class="post-date" title="2019-08-30 21:38:11">2019/08/30</span>
+        </a>
+        
+        <a  class="VUE "
+           href="/2019/09/14/v-model原理/"
+           data-tag="v-model原理"
+           data-author="" >
+            <span class="post-title" title="v-model原理">v-model原理</span>
+            <span class="post-date" title="2019-09-14 15:34:36">2019/09/14</span>
+        </a>
+        
+        <a  class="CSS "
+           href="/2019/09/10/伪类和伪元素总结/"
+           data-tag="伪类,伪元素"
+           data-author="" >
+            <span class="post-title" title="伪类和伪元素总结">伪类和伪元素总结</span>
+            <span class="post-date" title="2019-09-10 09:24:34">2019/09/10</span>
+        </a>
+        
+        <a  class="JS "
+           href="/2019/08/26/判断五大主流浏览器/"
+           data-tag="判断五大主流浏览器,原生JS"
+           data-author="" >
+            <span class="post-title" title="判断五大主流浏览器">判断五大主流浏览器</span>
+            <span class="post-date" title="2019-08-25 20:22:18">2019/08/25</span>
+        </a>
+        
+        <a  class="其他 "
+           href="/2019/08/27/前端页面优化/"
+           data-tag="页面优化,网页加载过程"
+           data-author="" >
+            <span class="post-title" title="前端页面优化">前端页面优化</span>
+            <span class="post-date" title="2019-08-26 20:40:12">2019/08/26</span>
+        </a>
+        
+        <a  class="VUE "
+           href="/2019/09/15/双向绑定/"
+           data-tag="双向绑定,发布者-订阅者模式"
+           data-author="" >
+            <span class="post-title" title="双向绑定">双向绑定</span>
+            <span class="post-date" title="2019-09-14 17:02:55">2019/09/14</span>
+        </a>
+        
+        <a  class="其他 "
+           href="/2019/08/31/前端路由的两种模式/"
+           data-tag="hash,history"
+           data-author="" >
+            <span class="post-title" title="前端路由的两种模式">前端路由的两种模式</span>
+            <span class="post-date" title="2019-08-31 14:43:51">2019/08/31</span>
+        </a>
+        
+        <a  class="CSS "
+           href="/2019/09/05/响应式布局方案/"
+           data-tag="响应式布局方案"
+           data-author="" >
+            <span class="post-title" title="响应式布局方案">响应式布局方案</span>
+            <span class="post-date" title="2019-09-05 10:06:59">2019/09/05</span>
+        </a>
+        
+        <a  class="其他 "
+           href="/2019/08/27/回流和重绘/"
+           data-tag="回流和重绘"
+           data-author="" >
+            <span class="post-title" title="回流和重绘">回流和重绘</span>
+            <span class="post-date" title="2019-08-27 14:15:56">2019/08/27</span>
+        </a>
+        
+        <a  class="面试 "
+           href="/2019/09/04/富途一面/"
+           data-tag="富途一面"
+           data-author="" >
+            <span class="post-title" title="富途一面">富途一面</span>
+            <span class="post-date" title="2019-09-04 14:28:13">2019/09/04</span>
+        </a>
+        
+        <a  class="JS "
+           href="/2019/09/03/对象的拷贝/"
+           data-tag="对象的拷贝"
+           data-author="" >
+            <span class="post-title" title="对象的拷贝">对象的拷贝</span>
+            <span class="post-date" title="2019-09-02 19:42:43">2019/09/02</span>
+        </a>
+        
+        <a  class=""
+           href="/2019/08/24/布局/"
+           data-tag="布局"
+           data-author="" >
+            <span class="post-title" title="布局">布局</span>
+            <span class="post-date" title="2019-08-24 09:29:57">2019/08/24</span>
+        </a>
+        
+        <a  class="算法 "
+           href="/2019/08/22/数组扁平化/"
+           data-tag="数组扁平化,js"
+           data-author="" >
+            <span class="post-title" title="数组扁平化">数组扁平化</span>
+            <span class="post-date" title="2019-08-22 15:46:24">2019/08/22</span>
+        </a>
+        
+        <a  class="JS "
+           href="/2019/08/27/数组遍历/"
+           data-tag="es6,数组遍历"
+           data-author="" >
+            <span class="post-title" title="数组遍历">数组遍历</span>
+            <span class="post-date" title="2019-08-26 20:08:08">2019/08/26</span>
+        </a>
+        
+        <a  class="算法 "
+           href="/2019/08/23/斐波那契/"
+           data-tag="js,斐波那契"
+           data-author="" >
+            <span class="post-title" title="斐波那契">斐波那契</span>
+            <span class="post-date" title="2019-08-22 16:58:49">2019/08/22</span>
+        </a>
+        
+        <a  class="JS "
+           href="/2019/09/15/栈和堆/"
+           data-tag="栈,堆"
+           data-author="" >
+            <span class="post-title" title="栈和堆">栈和堆</span>
+            <span class="post-date" title="2019-09-15 14:39:32">2019/09/15</span>
+        </a>
+        
+        <a  class="CSS "
+           href="/2019/09/01/浮动/"
+           data-tag="浮动"
+           data-author="" >
+            <span class="post-title" title="浮动">浮动</span>
+            <span class="post-date" title="2019-09-01 08:57:23">2019/09/01</span>
+        </a>
+        
+        <a  class="计算机网络 "
+           href="/2019/08/23/网络协议/"
+           data-tag="网络协议"
+           data-author="" >
+            <span class="post-title" title="网络协议">网络协议</span>
+            <span class="post-date" title="2019-08-23 14:12:21">2019/08/23</span>
+        </a>
+        
+        <a  class="CSS "
+           href="/2019/08/24/盒模型/"
+           data-tag="盒模型"
+           data-author="" >
+            <span class="post-title" title="盒模型">盒模型</span>
+            <span class="post-date" title="2019-08-23 19:37:16">2019/08/23</span>
+        </a>
+        
+        <a  class="计算机网络 "
+           href="/2019/08/31/网络攻击/"
+           data-tag="网络攻击,预防网络攻击"
+           data-author="" >
+            <span class="post-title" title="网络攻击">网络攻击</span>
+            <span class="post-date" title="2019-08-31 14:12:42">2019/08/31</span>
+        </a>
+        
+        <a  class="面试 "
+           href="/2019/08/22/美团一面/"
+           data-tag="前端"
+           data-author="" >
+            <span class="post-title" title="美团一面">美团一面</span>
+            <span class="post-date" title="2019-08-22 13:26:16">2019/08/22</span>
+        </a>
+        
+        <a  class="面试 "
+           href="/2019/09/03/美团二面/"
+           data-tag="美团二面"
+           data-author="" >
+            <span class="post-title" title="美团二面">美团二面</span>
+            <span class="post-date" title="2019-09-02 20:25:57">2019/09/02</span>
+        </a>
+        
+        <a  class="VUE "
+           href="/2019/08/31/虚拟DOM/"
+           data-tag="虚拟DOM"
+           data-author="" >
+            <span class="post-title" title="虚拟DOM">虚拟DOM</span>
+            <span class="post-date" title="2019-08-30 20:56:33">2019/08/30</span>
+        </a>
+        
+        <a  class="其他 "
+           href="/2019/09/04/页面阻塞问题/"
+           data-tag="页面阻塞问题"
+           data-author="" >
+            <span class="post-title" title="页面阻塞问题">页面阻塞问题</span>
+            <span class="post-date" title="2019-09-03 16:16:51">2019/09/03</span>
+        </a>
+        
+        <a  class="计算机网络 "
+           href="/2019/09/01/HTTP缓存/"
+           data-tag="HTTP缓存"
+           data-author="" >
+            <span class="post-title" title="HTTP缓存">HTTP缓存</span>
+            <span class="post-date" title="2019-09-01 15:55:04">2019/09/01</span>
+        </a>
+        
+        <a  class="算法 "
+           href="/2019/08/22/排序算法/"
+           data-tag="排序算法"
+           data-author="" >
+            <span class="post-title" title="排序算法">排序算法</span>
+            <span class="post-date" title="2019-08-22 14:17:58">2019/08/22</span>
+        </a>
+        
+    </nav>
+</div>
+    </div>
+    <div class="hide-list">
+        <div class="semicircle">
+            <div class="brackets first"><</div>
+            <div class="brackets">&gt;</div>
+        </div>
+    </div>
+</aside>
+<div class="post">
+    <div class="pjax">
+        <article id="js-栈和堆" class="article article-type-js" itemscope itemprop="blogPost">
+    
+        <h1 class="article-title">栈和堆</h1>
+    
+    <div class="article-meta">
+        
+        
+        
+        <span class="book">
+            
+                <a href="javascript:" data-rel="JS">JS</a>
+            
+        </span>
+        
+        
+        <span class="tag">
+            
+            <a href="javascript:" class="color2">栈</a>
+            
+            <a href="javascript:" class="color2">堆</a>
+            
+        </span>
+        
+    </div>
+    <div class="article-meta">
+        
+        创建时间:<time class="date" title='更新时间: 2019-09-15 06:56:06'>2019-09-15 14:39</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        
+        
+    </div>
+    
+    <div class="toc-ref">
+    
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#栈和堆"><span class="toc-text">栈和堆</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#栈-stack-：栈会自动分配内存空间，会自动释放，存放-基本类型-，简单的数据段，占据固定大小的空间。"><span class="toc-text">栈(stack)：栈会自动分配内存空间，会自动释放，存放 基本类型 ，简单的数据段，占据固定大小的空间。</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#堆-heap-动态分配的内存，大小不定也不会自动释放，存放引用类型，指那些可能由多个值构成的对象，保存在堆内存中，包含引用类型的变量，实际上保存的不是变量本身，而是指向该对象的指针。"><span class="toc-text">堆(heap):动态分配的内存，大小不定也不会自动释放，存放引用类型，指那些可能由多个值构成的对象，保存在堆内存中，包含引用类型的变量，实际上保存的不是变量本身，而是指向该对象的指针。</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#区别"><span class="toc-text">区别</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#栈：所有在方法中定义的变量都是放在栈内存中，随着方法的执行结束，这个方法的内存栈也自然销毁。"><span class="toc-text">栈：所有在方法中定义的变量都是放在栈内存中，随着方法的执行结束，这个方法的内存栈也自然销毁。</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#堆：堆内存中的对象不会随方法的结束而销毁，即使方法结束后，这个对象还可能被另一个引用变量所引用-参数传递-。创建对象是为了反复利用，这个对象将被保存到运行时数据区。"><span class="toc-text">堆：堆内存中的对象不会随方法的结束而销毁，即使方法结束后，这个对象还可能被另一个引用变量所引用(参数传递)。创建对象是为了反复利用，这个对象将被保存到运行时数据区。</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#栈和堆的溢出"><span class="toc-text">栈和堆的溢出</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#栈：可以递归调用方法，这样随着栈深度的增加，JVM维持着一条长长的方法调用轨迹，知道内存不够分配，产生栈溢出。"><span class="toc-text">栈：可以递归调用方法，这样随着栈深度的增加，JVM维持着一条长长的方法调用轨迹，知道内存不够分配，产生栈溢出。</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#堆：循环创建对象，通俗点就是不断的new-一个对象。"><span class="toc-text">堆：循环创建对象，通俗点就是不断的new 一个对象。</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#传值和传址"><span class="toc-text">传值和传址</span></a></li></ol>
+    
+<style>
+    .left-col .switch-btn,
+    .left-col .switch-area {
+        display: none;
+    }
+    .toc-level-3 i,
+    .toc-level-3 ol {
+        display: none !important;
+    }
+</style>
+</div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="栈和堆"><a href="#栈和堆" class="headerlink" title="栈和堆"></a>栈和堆</h3><h4 id="栈-stack-：栈会自动分配内存空间，会自动释放，存放-基本类型-，简单的数据段，占据固定大小的空间。"><a href="#栈-stack-：栈会自动分配内存空间，会自动释放，存放-基本类型-，简单的数据段，占据固定大小的空间。" class="headerlink" title="栈(stack)：栈会自动分配内存空间，会自动释放，存放 基本类型 ，简单的数据段，占据固定大小的空间。"></a><strong>栈(stack)</strong>：栈会自动分配内存空间，会自动释放，存放 <strong>基本类型</strong> ，简单的数据段，占据固定大小的空间。</h4><blockquote>
+<p><strong>基本类型</strong>：String，Number，Boolean，Null，Undefined</p>
+</blockquote>
+<h4 id="堆-heap-动态分配的内存，大小不定也不会自动释放，存放引用类型，指那些可能由多个值构成的对象，保存在堆内存中，包含引用类型的变量，实际上保存的不是变量本身，而是指向该对象的指针。"><a href="#堆-heap-动态分配的内存，大小不定也不会自动释放，存放引用类型，指那些可能由多个值构成的对象，保存在堆内存中，包含引用类型的变量，实际上保存的不是变量本身，而是指向该对象的指针。" class="headerlink" title="堆(heap):动态分配的内存，大小不定也不会自动释放，存放引用类型，指那些可能由多个值构成的对象，保存在堆内存中，包含引用类型的变量，实际上保存的不是变量本身，而是指向该对象的指针。"></a><strong>堆(heap)</strong>:动态分配的内存，大小不定也不会自动释放，<strong>存放引用类型</strong>，指那些可能由多个值构成的对象，保存在堆内存中，包含引用类型的变量，实际上保存的不是变量本身，而是指向该对象的指针。</h4><blockquote>
+<p><strong>引用类型</strong>：Function，Array，Object</p>
+</blockquote>
+<h3 id="区别"><a href="#区别" class="headerlink" title="区别"></a>区别</h3><h4 id="栈：所有在方法中定义的变量都是放在栈内存中，随着方法的执行结束，这个方法的内存栈也自然销毁。"><a href="#栈：所有在方法中定义的变量都是放在栈内存中，随着方法的执行结束，这个方法的内存栈也自然销毁。" class="headerlink" title="栈：所有在方法中定义的变量都是放在栈内存中，随着方法的执行结束，这个方法的内存栈也自然销毁。"></a><strong>栈</strong>：所有在方法中定义的变量都是放在栈内存中，随着方法的执行结束，这个方法的内存栈也自然销毁。</h4><blockquote>
+<p>优点：存取速度比堆快，仅次于直接位于CPU中的寄存器，数据可以共享；<br>缺点：存在栈中的数据大小与生存期必须是确定的，缺乏灵活性。</p>
+</blockquote>
+<h4 id="堆：堆内存中的对象不会随方法的结束而销毁，即使方法结束后，这个对象还可能被另一个引用变量所引用-参数传递-。创建对象是为了反复利用，这个对象将被保存到运行时数据区。"><a href="#堆：堆内存中的对象不会随方法的结束而销毁，即使方法结束后，这个对象还可能被另一个引用变量所引用-参数传递-。创建对象是为了反复利用，这个对象将被保存到运行时数据区。" class="headerlink" title="堆：堆内存中的对象不会随方法的结束而销毁，即使方法结束后，这个对象还可能被另一个引用变量所引用(参数传递)。创建对象是为了反复利用，这个对象将被保存到运行时数据区。"></a><strong>堆</strong>：堆内存中的对象不会随方法的结束而销毁，即使方法结束后，这个对象还可能被另一个引用变量所引用(参数传递)。创建对象是为了反复利用，这个对象将被保存到运行时数据区。</h4><h3 id="栈和堆的溢出"><a href="#栈和堆的溢出" class="headerlink" title="栈和堆的溢出"></a>栈和堆的溢出</h3><h4 id="栈：可以递归调用方法，这样随着栈深度的增加，JVM维持着一条长长的方法调用轨迹，知道内存不够分配，产生栈溢出。"><a href="#栈：可以递归调用方法，这样随着栈深度的增加，JVM维持着一条长长的方法调用轨迹，知道内存不够分配，产生栈溢出。" class="headerlink" title="栈：可以递归调用方法，这样随着栈深度的增加，JVM维持着一条长长的方法调用轨迹，知道内存不够分配，产生栈溢出。"></a><strong>栈</strong>：可以递归调用方法，这样随着栈深度的增加，JVM维持着一条长长的方法调用轨迹，知道内存不够分配，产生栈溢出。</h4><h4 id="堆：循环创建对象，通俗点就是不断的new-一个对象。"><a href="#堆：循环创建对象，通俗点就是不断的new-一个对象。" class="headerlink" title="堆：循环创建对象，通俗点就是不断的new 一个对象。"></a><strong>堆</strong>：循环创建对象，通俗点就是不断的new 一个对象。</h4><h3 id="传值和传址"><a href="#传值和传址" class="headerlink" title="传值和传址"></a>传值和传址</h3><p>从一个向另一个变量复制引用类型的值，复制的其实是指针，因此两个变量最终指向同一个对象。即复制的是栈中的地址而不是堆中的对象。<br>从一个变量复向另一个变量复制基本类型的值，会创建这个值的副本。</p>
+
+      
+       <hr><span style="font-style: italic;color: gray;"> 欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以邮件至 1396961884@qq.com </span>
+    </div>
+</article>
+
+
+
+
+
+
+
+    
+
+
+
+
+    </div>
+    <div class="copyright">
+        <p class="footer-entry">©2016-2020 forgiveForever</p>
+<p class="footer-entry">Built with <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/yelog/hexo-theme-3-hexo" target="_blank">3-hexo</a> theme</p>
+
+    </div>
+    <div class="full-toc">
+        <button class="full"><span class="min "></span></button>
+<button class="post-toc-menu"><span class="post-toc-menu-icons"></span></button>
+<div class="post-toc"><span class="post-toc-title">目录</span>
+    <div class="post-toc-content">
+
+    </div>
+</div>
+<a class="" id="rocket" href="javascript:void(0)"></a>
+    </div>
+</div>
+<div class="acParent"></div>
+
+</body>
+<script src="//cdn.bootcss.com/jquery.pjax/2.0.1/jquery.pjax.min.js"></script>
+
+<script src="/js/script.js?v=1.0.1" ></script>
+<script>
+    var img_resize = 'default';
+    /*作者、标签的自动补全*/
+    $(function () {
+        $('.search').AutoComplete({
+            'data': ['#BLGO','#Ajax','#Ajax跨域','#CSS选择器','#HTTPS加密','#Cookie','#Session','#HTTP','#HTTPS','#HTTP与HTTPS区别','#Promise','#异步','#VUE生命周期','#async','#console.log输出','#cookie跨域','#diff','#v-model原理','#伪类','#伪元素','#判断五大主流浏览器','#原生JS','#页面优化','#网页加载过程','#双向绑定','#发布者-订阅者模式','#hash','#history','#响应式布局方案','#回流和重绘','#富途一面','#对象的拷贝','#布局','#数组扁平化','#js','#es6','#数组遍历','#斐波那契','#栈','#堆','#浮动','#网络协议','#盒模型','#网络攻击','#预防网络攻击','#前端','#美团二面','#虚拟DOM','#页面阻塞问题','#HTTP缓存','#排序算法',],
+            'itemHeight': 20,
+            'width': 418
+        }).AutoComplete('show');
+    })
+    function initArticle() {
+        /*渲染对应的表格样式*/
+        
+            $(".post .pjax table").addClass("green_title");
+        
+
+        /*渲染打赏样式*/
+        
+
+        /*高亮代码块行号*/
+        
+        $('pre code').each(function(){
+            var lines = $(this).text().split('\n').length - 1, widther='';
+            if (lines>99) {
+                widther = 'widther'
+            }
+            var $numbering = $('<ul/>').addClass('pre-numbering ' + widther).attr("unselectable","on");
+            $(this).addClass('has-numbering ' + widther)
+                    .parent()
+                    .append($numbering);
+            for(var i=1;i<=lines;i++){
+                $numbering.append($('<li/>').text(i));
+            }
+        });
+        
+
+        /*访问数量*/
+        
+
+        /*代码高亮，行号对齐*/
+        $('.pre-numbering').css('line-height',$('.has-numbering').css('line-height'));
+
+        
+    }
+
+    /*打赏页面隐藏与展示*/
+    
+
+</script>
+
+<!--加入行号的高亮代码块样式-->
+
+<style>
+    pre{
+        position: relative;
+        margin-bottom: 24px;
+        border-radius: 10px;
+        border: 1px solid #e2dede;
+        background: #FFF;
+        overflow: hidden;
+    }
+    code.has-numbering{
+        margin-left: 30px;
+    }
+    code.has-numbering.widther{
+        margin-left: 35px;
+    }
+    .pre-numbering{
+        margin: 0px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 20px;
+        padding: 0.5em 3px 0.7em 5px;
+        border-right: 1px solid #C3CCD0;
+        text-align: right;
+        color: #AAA;
+        background-color: #fafafa;
+    }
+    .pre-numbering.widther {
+        width: 35px;
+    }
+</style>
+
+<!--自定义样式设置-->
+<style>
+    
+    
+    .nav {
+        width: 542px;
+    }
+    .nav.fullscreen {
+        margin-left: -542px;
+    }
+    .nav-left {
+        width: 120px;
+    }
+    
+    
+    @media screen and (max-width: 1468px) {
+        .nav {
+            width: 492px;
+        }
+        .nav.fullscreen {
+            margin-left: -492px;
+        }
+        .nav-left {
+            width: 100px;
+        }
+    }
+    
+    
+    @media screen and (max-width: 1024px) {
+        .nav {
+            width: 492px;
+            margin-left: -492px
+        }
+        .nav.fullscreen {
+            margin-left: 0;
+        }
+        .nav .hide-list.fullscreen {
+            left: 492px
+        }
+    }
+    
+    @media screen and (max-width: 426px) {
+        .nav {
+            width: 100%;
+        }
+        .nav-left {
+            width: 100%;
+        }
+    }
+    
+    
+    .nav-right .title-list nav a .post-title, .nav-right .title-list #local-search-result a .post-title {
+        color: #383636;
+    }
+    
+    
+    .nav-right .title-list nav a .post-date, .nav-right .title-list #local-search-result a .post-date {
+        color: #5e5e5f;
+    }
+    
+    
+    .nav-right nav a.hover, #local-search-result a.hover{
+        background-color: #e2e0e0;
+    }
+    
+    
+
+    /*列表样式*/
+    
+    .post .pjax article .article-entry>ol, .post .pjax article .article-entry>ul, .post .pjax article>ol, .post .pjax article>ul{
+        border: #e2dede solid 1px;
+        border-radius: 10px;
+        padding: 10px 32px 10px 56px;
+    }
+    .post .pjax article .article-entry li>ol, .post .pjax article .article-entry li>ul,.post .pjax article li>ol, .post .pjax article li>ul{
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+    .post .pjax article .article-entry>ol>li, .post .pjax article .article-entry>ul>li,.post .pjax article>ol>li, .post .pjax article>ul>li{
+        margin-bottom: auto;
+        margin-left: auto;
+    }
+    .post .pjax article .article-entry li>ol>li, .post .pjax article .article-entry li>ul>li,.post .pjax article li>ol>li, .post .pjax article li>ul>li{
+        margin-bottom: auto;
+        margin-left: auto;
+    }
+    
+
+    /* 背景图样式 */
+    
+    
+
+
+    /*引用块样式*/
+    
+
+    /*文章列表背景图*/
+    
+    .nav-right:before {
+        content: ' ';
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0.3;
+        background: url("https://i.loli.net/2019/07/22/5d3521411f3f169375.png");
+        background-repeat: no-repeat;
+        background-position: 50% 0;
+        -ms-background-size: cover;
+        -o-background-size: cover;
+        -moz-background-size: cover;
+        -webkit-background-size: cover;
+        background-size: cover;
+    }
+    
+
+    
+</style>
+
+
+
+
+
+
+
+</html>
